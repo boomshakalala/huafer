@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_bg_gray_border_round_shape"
+    android:orientation="vertical"
+    android:padding="0.5dp">
+
+
+    <FrameLayout
+        android:id="@+id/flImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivProPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="2dp"
+            fresco:viewAspectRatio="1.0" />
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/video_play_small"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/normalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="小孩推车 | 方向盘海马" />
+
+        <com.huapu.huafen.views.CommonPriceTagView
+            android:id="@+id/cptv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/text_to_text" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_to_text"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivHeader"
+                    style="@style/styleAvatarSmall"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_head"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/base_tab_bar_divider"
+                    fresco:roundingBorderWidth="0.5dp" />
+
+                <com.huapu.huafen.views.UserView
+                    android:id="@+id/userView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="1.5dp"
+                android:background="@color/white"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/image_to_text"
+                android:paddingRight="5dp">
+
+                <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp"
+                    tools:src="@drawable/btn_item_like_select" />
+
+                <TextView
+                    android:id="@+id/tvLike"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="#888888" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

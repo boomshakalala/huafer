@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:layout_marginLeft="@dimen/side"
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_marginRight="@dimen/side"
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/right_enter"
+            android:textColor="@color/base_pink"
+            android:text="" />
+    </LinearLayout>
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:canLoop="true" />
+
+</merge>

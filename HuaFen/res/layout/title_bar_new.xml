@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutBase"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/tvTitleBarLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivTitleBarLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:src="@drawable/personal_title_back_close"
+                 />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/titleBarCenterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp">
+
+            <TextView
+                android:id="@+id/tvTitleBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                tools:text="@string/app_name"
+                style="@style/largeText"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tvTitleBarRight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="什么是芝麻信用"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnTitleBarRight2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingRight="5dp"
+                    android:visibility="gone"
+                    tools:src="@drawable/personal_title_share_close"
+                    tools:visibility="visible"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/btnTitleBarRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/personal_title_more_close"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/tvMoreMsgUnRead"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_alignRight="@+id/btnTitleBarRight"
+                        android:layout_alignTop="@+id/btnTitleBarRight"
+                        android:background="@drawable/circle_read_text_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ts_20"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/divider_line_horizontal" />
+</merge>

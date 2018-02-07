@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/rotate_header_web_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        app:ptr_duration_to_close="200"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+
+        <com.huapu.huafen.scrollablelayoutlib.ScrollableLayout
+            android:id="@+id/scrollableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.huapu.huafen.views.ClassBannerView
+                    android:id="@+id/classBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recyclerGallery" />
+            </RelativeLayout>
+            <com.huapu.huafen.scrollablelayoutlib.PagerSlidingTabStrip
+                android:id="@+id/pagerTabStrip"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/layoutHeader" />
+            <!-- viewpager展示listview的 -->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpGoods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.huapu.huafen.scrollablelayoutlib.ScrollableLayout>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <ImageView
+        android:id="@+id/ivBall"
+        android:layout_width="42dp"
+        android:layout_height="63.5dp"
+        android:background="@drawable/index_ball"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="45dp"
+        android:visibility="gone"/>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="45.5dp">
+
+       <Button
+           android:id="@+id/btnBack"
+           android:layout_marginLeft="5dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_centerVertical="true"
+           android:background="@drawable/personal_title_back_close" />
+       <com.huapu.huafen.views.TitleBarNew
+           android:id="@+id/titleBar"
+           android:layout_width="match_parent"
+           android:layout_height="45.5dp"
+           android:visibility="gone"
+           />
+
+   </RelativeLayout>
+
+</RelativeLayout>

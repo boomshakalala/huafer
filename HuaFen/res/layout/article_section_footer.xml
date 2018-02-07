@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/tvAddArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/article_add"
+        android:padding="@dimen/item_margin"
+        android:layout_gravity="center_horizontal"
+        style="@style/smallTextPink"
+        android:drawablePadding="@dimen/text_to_text"
+        android:gravity="center_horizontal"
+        android:text="添加图文"
+        />
+
+</LinearLayout>

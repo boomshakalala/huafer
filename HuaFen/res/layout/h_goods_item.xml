@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="35dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/normalTextGray"
+            android:background="@color/base_bg"
+            tools:text="商品分类"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rlItemValue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+            <TextView
+                android:id="@+id/itemDesc"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_marginRight="20dp"
+                android:ellipsize="end"
+                style="@style/normalText"
+                android:paddingRight="@dimen/image_to_text"
+                tools:text="asdadadadadsadsadadsadasdasdadsasadadadas"
+                />
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/right_enter"
+                android:paddingRight="@dimen/side"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/divider_line_horizontal"/>
+</LinearLayout>

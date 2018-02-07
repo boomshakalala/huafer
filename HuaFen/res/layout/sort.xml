@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlSort"
+    style="@style/styleLayoutItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rgSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbTime"
+            style="@style/styleSort"
+            android:text="按时间" />
+
+        <RadioButton
+            android:id="@+id/rbHot"
+            style="@style/styleSort"
+            android:checked="true"
+            android:layout_marginLeft="10dp"
+            android:text="按热度" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

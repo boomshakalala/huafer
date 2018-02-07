@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_rec_article"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        fresco:placeholderImage="@drawable/empty_sell"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundingBorderColor="#1F000000"
+        fresco:roundingBorderWidth="0.5dp" />
+
+    <TextView
+        android:id="@+id/tv_rec_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/sd_rec_article"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="大理白族院子"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_rec_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_rec_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/sd_rec_article"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/tv_gray"
+        android:text="在大理，一定要住在传统的院子里。后院里种了好多蔬菜,大理是一个令人神往的地方"
+        android:textSize="14sp" />
+</RelativeLayout>

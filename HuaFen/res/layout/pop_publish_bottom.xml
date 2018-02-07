@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0000000"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <View
+            android:id="@+id/blankSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            />
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/toast_bg"
+            android:orientation="vertical" >
+
+
+            <RelativeLayout
+                android:id="@+id/iv_DJ"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvPricingStrategy"
+                    android:drawableLeft="@drawable/helping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/image_to_text"
+                    android:layout_marginLeft="@dimen/side"
+                    android:text="定价攻略"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_des_28" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:background="@drawable/right_enter" />
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/base_divider_height"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:background="@color/base_tab_bar_divider" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:text="卖价"
+                        style="@style/normalText" />
+                    <EditText
+                        android:id="@+id/etPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="¥0"
+                        android:textColorHint="@color/text_black_enable"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textSize="@dimen/ts_des_28"/>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/base_divider_height"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_tab_bar_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:gravity="center"
+                        android:text="原价"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/ts_des_28" />
+
+                    <EditText
+                        android:id="@+id/etPastPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="¥0"
+                        android:textColorHint="@color/text_black_enable"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        style="@style/normalText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_divider_height"
+                android:background="@color/base_tab_bar_divider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/side"
+                        android:layout_marginRight="@dimen/side"
+                        android:id="@+id/tvExemption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="包邮"
+                        style="@style/normalText" />
+
+                    <ImageView
+                        android:id="@+id/ivFreeDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tvExemption"
+                        android:src="@drawable/btn_free_delivery_selector" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlPostagePaid"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/side"
+                        android:layout_marginRight="@dimen/side"
+                        android:id="@+id/tvPostagePaid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="邮费到付"
+                        style="@style/normalText" />
+
+                    <ImageView
+                        android:id="@+id/ivPostagePaid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tvPostagePaid"
+                        android:src="@drawable/btn_free_delivery_selector" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_divider_height"
+                android:background="@color/base_tab_bar_divider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:gravity="center"
+                        android:text="邮费"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/ts_des_28" />
+                    <EditText
+                        android:id="@+id/etPostage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint="不填则为待议"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_black_enable"
+                        android:textSize="@dimen/ts_des_28" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvBtnConfirm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/base_pink"
+                    android:gravity="center"
+                    android:text="确定"
+                    style="@style/normalTextWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>

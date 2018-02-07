@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@color/divider_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layoutRefundGoods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:layout_marginLeft="@dimen/side"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="退货退款"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutRefundMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:layout_marginLeft="@dimen/side"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="退款"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="@color/white">
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb1"
+            android:text="店主更新"
+            style="@style/comment_rb_style"/>
+        <RadioButton
+            android:id="@+id/rb2"
+            android:text="关注"
+            style="@style/comment_rb_style"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/llMoveLine"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/base_pink"/>
+    </LinearLayout>
+</LinearLayout>

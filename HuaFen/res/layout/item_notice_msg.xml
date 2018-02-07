@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_notice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:background="@drawable/text_rectangle_gray_bg"
+        android:text="yyyy年 MM月dd日 HH:mm"
+        android:textColor="@color/ali_feedback_black" />
+    <RelativeLayout
+        android:id="@+id/ll_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/ll_notice_bg">
+
+        <TextView
+            android:id="@+id/tv_notice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="站内警告"
+            android:textColor="@color/ali_feedback_black" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_notice_title"
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_notice"
+                style="@style/styleCommodity"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center_vertical"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundingBorderColor="@color/divider_black"
+                android:visibility="gone"
+                fresco:roundedCornerRadius="3dp"
+                fresco:roundingBorderWidth="0.5dp" />
+
+            <TextView
+                android:id="@+id/tv_notice_content"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/ali_feedback_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_right_enter"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/right_enter"/>
+    </RelativeLayout>
+</LinearLayout>

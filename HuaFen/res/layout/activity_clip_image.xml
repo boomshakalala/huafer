@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#181818">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="matrix" />
+
+    <com.huapu.huafen.views.ClipView
+        android:id="@+id/clipview"
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp">
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:padding="5dp"
+            style="@style/bigText"
+            android:text="取消"/>
+        
+        <Button
+            android:id="@+id/rotate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            style="@style/bigText"
+            android:text="旋转"/>
+        
+        <Button
+	        android:id="@+id/ok_btn"
+	        android:visibility="visible"
+	        android:text="确定"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+            android:padding="5dp"
+            style="@style/bigText"
+	        android:layout_marginRight="25dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

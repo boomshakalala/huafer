@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/chbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/order_joint_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side" />
+
+    <LinearLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chbSelect"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivPic"
+                style="@style/styleAvatarBig"
+                android:layout_centerVertical="true"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/image_to_text"
+                android:layout_marginRight="@dimen/side"
+                android:layout_toRightOf="@id/ivPic"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/normalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    tools:text="书包 | swiss" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        style="@style/smallTextPink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        tools:text="111" />
+
+                    <TextView
+                        android:id="@+id/tvIsFreeDelivery"
+                        style="@style/smallTextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_free_delivery_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="包邮" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPayMethod"
+                    style="@style/normalTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    tools:text="支付方式：微信" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llRemark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <View style="@style/divider_line_horizontal" />
+
+            <TextView
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_margin"
+                android:text="订单备注:" />
+
+            <TextView
+                android:id="@+id/tvRemark"
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin"
+                android:layout_marginRight="@dimen/side"
+                android:layout_marginTop="10dp"
+                tools:text="这个书包穿啊涉及到哈师大活动空间啊道具卡三等奖卡号及客服电话卡时间看哈房价快速的开发和快速发货及时富士康解放军1 " />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        style="@style/divider_line_horizontal"
+        android:layout_below="@id/rlContainer"
+        android:layout_marginLeft="@dimen/side" />
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/styleLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="收货人"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvReceiver"
+                style="@style/normalText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                tools:text="爱神的箭阿萨德尽快哈抗静电剂卡号等哈是点击爱仕达has快点哈刷卡机等哈说客户登记卡还款的好看教案和快递哈手机号" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="收货地址"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvShippingAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                tools:text="熟练度拉上来的拉升的哈萨克动画卡回复合适的话咖啡壶撒的谎防守打法惊世毒妃可视电话放声大哭积分后胜多负少的看法和空间发合适的话翻山倒海款福克斯的发挥科技三德科技放声大哭金风科技山东航空积分后苦上加苦上岛咖啡灰色的空间发货款" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/divider_line_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side">
+
+        <TextView
+            android:id="@+id/chbSetDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/received_goods_gray"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="设为默认"
+            android:textColor="@color/text_color"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+
+            >
+            <TextView
+                android:id="@+id/tvEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/tvDelete"
+                android:drawableLeft="@drawable/address_edit_icon"
+                android:drawablePadding="@dimen/text_to_text"
+                android:gravity="center_vertical"
+                android:text="编辑"
+                android:textColor="@color/text_color"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/address_delete_icon"
+                android:drawablePadding="@dimen/text_to_text"
+                android:gravity="center_vertical"
+                android:text="删除"
+                android:textColor="@color/text_color"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View style="@style/divider_line_horizontal" />
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/goodsHeader"
+        style="@style/styleLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/avatar"
+            style="@style/styleAvatarBig"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_pic"
+            fresco:placeholderImageScaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignBaseline="@id/avatar"
+            android:layout_marginLeft="@dimen/item_margin"
+            android:layout_toRightOf="@id/avatar"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvGoodsNameAndBrand"
+                style="@style/bigText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/avatar"
+                android:layout_toRightOf="@id/avatar"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="耐克 | 连帽衫" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/normalTextPink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/avatar"
+                tools:text="￥199" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvGoods"
+            style="@style/normalTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/avatar"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/text_pink_light_round_bg"
+            android:paddingBottom="@dimen/text_to_text"
+            android:paddingLeft="@dimen/image_to_text"
+            android:paddingRight="@dimen/image_to_text"
+            android:paddingTop="@dimen/text_to_text"
+            android:text="查看商品" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/sort"
+        android:visibility="gone" />
+
+</LinearLayout>

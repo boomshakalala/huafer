@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/commentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvReplied"
+            android:layout_width="match_parent"
+            android:background="@color/base_pink"
+            android:layout_height="50dp"
+            android:text="回评"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+    <com.huapu.huafen.views.HLoadingStateView
+        android:id="@+id/loadingStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</FrameLayout>

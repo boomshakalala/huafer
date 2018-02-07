@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:padding="1dp"
+        android:id="@+id/content1"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/content1_image"
+            android:layout_width="340dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            fresco:roundedCornerRadius="3dp"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+             />
+        <View
+            android:layout_width="340dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/white_bg_gray_border_round_shape_clock"
+            />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/article_1"
+            android:layout_marginLeft="315dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aritcle"/>
+
+
+        <TextView
+            android:id="@+id/shop_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/content1_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/side"
+            android:drawableLeft="@drawable/shop_eye"
+            style="@style/smallTextWhite"
+            android:drawablePadding="@dimen/text_to_text"
+            android:text="11" />
+
+        <TextView
+            android:id="@+id/shop_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/content1_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_toRightOf="@id/shop_eye"
+            style="@style/smallTextWhite"
+            android:drawableLeft="@drawable/shop_huayu_collection"
+            android:drawablePadding="@dimen/text_to_text"
+            android:text="15" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/content1_image"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginRight="@dimen/side"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/normalTextWhite"
+            android:text="fsadfasdfsdfsdfsdfsdfsdfsdfsdf" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:padding="1dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/content2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        tools:visibility="gone"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/content2_image"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            fresco:roundedCornerRadius="3dp"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            />
+        <View
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/white_bg_gray_border_round_shape_clock"
+            />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/article_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aritcle"
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/shop_eye_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/content2_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/side"
+            android:drawableLeft="@drawable/shop_eye"
+            android:drawablePadding="@dimen/text_to_text"
+            style="@style/smallTextWhite"
+            android:text="33" />
+
+        <TextView
+            android:id="@+id/shop_collect_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/content2_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_toRightOf="@id/shop_eye_2"
+            android:drawableLeft="@drawable/shop_huayu_collection"
+            android:drawablePadding="@dimen/text_to_text"
+            style="@style/smallTextWhite"
+            android:text="85" />
+
+        <TextView
+            android:id="@+id/title_2"
+            android:maxLines="1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/content2_image"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginRight="@dimen/side"
+            android:ellipsize="end"
+            style="@style/normalTextWhite"
+            android:text="fsadfasdfsdfsdfsdfsdfsdfsdfsdf" />
+        <!--android:background="@drawable/grey_divider_order"-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

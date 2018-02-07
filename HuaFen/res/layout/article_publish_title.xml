@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="45.5dp"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:src="@drawable/personal_title_back_close" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <!--<TextView
+                android:paddingLeft="10dp"
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/normalText"
+                android:text="保存草稿"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical"
+                />
+            <View
+                android:id="@+id/verticalLine1"
+                android:layout_toLeftOf="@id/tvSave"
+                style="@style/divider_line_vertical"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                />
+            -->
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="预览"
+                style="@style/normalText"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                />
+            <View
+                android:id="@+id/verticalLine2"
+                android:layout_toLeftOf="@id/tvPreview"
+                style="@style/divider_line_vertical"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/tvSort"
+                android:layout_toLeftOf="@id/verticalLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="排序"
+                style="@style/normalText"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/article_sort"
+                android:drawablePadding="@dimen/image_to_text"
+                android:paddingRight="10dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <View
+        style="@style/divider_line_horizontal"/>
+</LinearLayout>

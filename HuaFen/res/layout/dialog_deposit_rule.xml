@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/base_pink"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/base_tab_bar_divider" />-->
+
+    <TextView
+        android:id="@+id/tvDialogContent"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxHeight="200dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="保证金规则"
+        android:textColor="@color/text_color"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_text_Dialog"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="1.出价前需先缴纳保证金，系统将锁定该笔款项。\n2.若拍卖出局，待拍卖结束后，系统会在72小时内释放保证金。\n3.若成功得标，买家在72小时内及时完成付款。"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/closeDialog"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="我知道了" />
+
+
+</LinearLayout>

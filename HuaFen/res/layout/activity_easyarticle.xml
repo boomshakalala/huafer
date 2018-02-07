@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.EasyArticleActivity">
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#eaeaea" />
+
+        <TextView
+            android:id="@+id/sendText"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/shape_send_corner"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp">
+
+                <EditText
+                    android:id="@+id/articleTitle"
+                    style="@style/bigText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入花语标题"
+                    android:lines="3"
+                    android:maxLength="36"
+                    android:textColorHint="@color/text_black_enable"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/leftWords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:paddingBottom="3dp"
+                    android:text="可输入36字"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="12sp" />
+
+                <View
+                    style="@style/divider_line_horizontal"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/articleContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_moment_content"
+                android:gravity="top"
+                android:hint="说点什么吧（选填）"
+                android:lines="4"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#333333"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <com.huapu.huafen.views.easyphoto.ScrollFullGridView
+                android:id="@+id/gvPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white"
+                android:horizontalSpacing="10dp"
+                android:listSelector="@null"
+                android:numColumns="3"
+                android:verticalSpacing="10dp" />
+
+            <TextView
+                android:id="@+id/tvPickClassification"
+                style="@style/smallTextPink"
+                android:layout_width="63dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_white_pink_rect_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="选择分类" />
+
+            <com.huapu.huafen.views.ShareArticleLayout
+                android:id="@+id/shareArticleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="-10dp" />
+
+            <TextView
+                android:id="@+id/textTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/aritlce_cover_tip_bg"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="16dp"
+                android:text="提示：你可以任意添加一段文字跟最多九张图片来完成一篇花语。"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

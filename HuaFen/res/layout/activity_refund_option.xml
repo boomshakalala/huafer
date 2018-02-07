@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlRefundCashAndGoods"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/tvRefundCashAndGoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/bigText"
+            android:text="退货退款"
+            android:drawablePadding="@dimen/image_to_text"
+            android:drawableLeft="@drawable/refund_goods_and_cash"
+            android:layout_marginLeft="@dimen/side"
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvRefundCashAndGoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/normalTextGray"
+            android:text="已收到货，需要退还已收到的货物"
+            />
+        <ImageView
+            android:layout_marginRight="@dimen/side"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_enter"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRefundCash"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        >
+        <TextView
+            android:layout_marginLeft="@dimen/side"
+            android:id="@+id/tvRefundCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/bigText"
+            android:text="仅退款"
+            android:drawablePadding="@dimen/image_to_text"
+            android:drawableLeft="@drawable/refund_cash"
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvRefundCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/normalTextGray"
+            android:text="未收到货，或与卖家协商同意前提下申请"
+            />
+        <ImageView
+            android:layout_marginRight="@dimen/side"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_enter"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:background="@color/white">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/itemimage"
+        style="@style/styleAvatarNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@drawable/default_pic"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:roundedCornerRadius="0dp"
+        fresco:viewAspectRatio="1.785" />
+
+    <LinearLayout
+        android:layout_width="147dp"
+        android:layout_height="36dp"
+        android:layout_alignBottom="@+id/itemimage"
+        android:layout_centerHorizontal="true"
+        android:background="@color/huayumengcheng"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/smallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:maxWidth="110dp"
+            android:text="最in搭配"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/note"
+            style="@style/tiniText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="最近明星必备单品搭配"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

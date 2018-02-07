@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/layoutUnCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_title_bar_bg"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/ivUnCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/credit_dark" />
+
+        <TextView
+            android:id="@+id/tvExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="点亮信用金认证，需要冻结您1000元为信用金，申请解冻后返还，您将失去信用金认证"
+            style="@style/normalTextGray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="您已点亮信用金认证"
+            android:textColor="#6BD2B3"
+            android:textSize="@dimen/ts_small_24"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4fffb"
+        android:orientation="vertical"
+        android:padding="10dp" 
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/credit_light" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="¥"
+                android:textColor="#6BD2B3"
+                android:textSize="@dimen/ts_title_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="1000"
+                android:textColor="#6BD2B3"
+                android:textSize="@dimen/ts_price_36" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="您已点亮信用金认证"
+            android:textColor="#6BD2B3"
+            android:textSize="@dimen/ts_small_24" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutXIN"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/base_title_bar_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="信用约定"
+            style="@style/normalText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/ivRight"
+            android:text="花粉儿信用金说明"
+            style="@style/normalText" />
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right"
+            android:background="@drawable/right_enter" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/divider_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ivWorth"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/worth" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_to_text"
+                android:gravity="center"
+                android:text="品质承诺"
+                style="@style/normalText" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/base_divider_height"
+            android:layout_height="match_parent"
+            android:background="@color/divider_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ivCredibility"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/credibility" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_to_text"
+                android:gravity="center"
+                android:text="信誉承诺"
+                style="@style/normalText" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/base_divider_height"
+            android:layout_height="match_parent"
+            android:background="@color/divider_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ivSafe"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/safe" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_to_text"
+                android:gravity="center"
+                android:text="安全承诺"
+                style="@style/normalText" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBtnPayXIN"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_pink_round_bg"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:text="点亮信用金"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/ts_des_28" />
+
+</LinearLayout>

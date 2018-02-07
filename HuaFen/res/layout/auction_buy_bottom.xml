@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/base_pink"
+    >
+    <TextView
+    android:id="@+id/tvBidBuy"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    style="@style/bigTextWhite"
+    android:text="交保证金报名"
+    android:drawablePadding="5dp"
+    android:drawableLeft="@drawable/auction_icon"
+    />
+</FrameLayout>

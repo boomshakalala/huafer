@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@drawable/text_gray_round_bg"
+        >
+        <TextView
+            android:background="@null"
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="@color/text_black_light"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/btn_title_search_pink"
+            android:imeOptions="actionSearch"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:textSize="@dimen/ts_des_28" />
+
+    </LinearLayout>
+
+</LinearLayout>

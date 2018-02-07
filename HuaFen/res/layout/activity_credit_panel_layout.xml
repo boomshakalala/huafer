@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    tools:context=".activity.CreditPanelActivity">
+
+    <com.huapu.huafen.zmxy.view.SesameCreditPanel
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="370dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_alignBottom="@id/panel"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="因为信用，所以简单"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@id/textView"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/textView"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/whatIsSesame"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/panel"
+        android:background="@color/white"
+        android:drawableRight="@drawable/fill_black"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="芝麻信用是什么？"
+        android:textColor="@color/text_color"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50dp"
+        android:background="@drawable/sesame_credit_bg"
+        android:gravity="center"
+        android:text="更新芝麻信用"
+        android:textColor="#1C72E3"
+        android:textSize="16sp" />
+
+</RelativeLayout>

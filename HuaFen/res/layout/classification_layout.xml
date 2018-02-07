@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_search" />
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerClass1"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@color/class_layout_item_bg"
+                android:paddingBottom="48dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerClass2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/side"
+                android:paddingRight="@dimen/side" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

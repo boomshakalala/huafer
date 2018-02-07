@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutSelect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/base_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.huapu.huafen.views.DelTextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.huapu.huafen.views.DelTextView
+            android:id="@+id/tvDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutSelect"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#dcdcdc"
+        android:dividerHeight="@dimen/base_divider_height"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.WalletShareActivity">
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/left_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/gray_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="分享"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/make_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="生成海报"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/shareBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/weiXinFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/image_to_text"
+            android:drawableTop="@drawable/share_friend"
+            android:gravity="center_horizontal"
+            android:text="微信好友"
+            android:textColor="#888888"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/friendQuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/image_to_text"
+            android:drawableTop="@drawable/share_friends"
+            android:gravity="center_horizontal"
+            android:text="朋友圈"
+            android:textColor="#888888"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/sinaWeiBo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/image_to_text"
+            android:drawableTop="@drawable/share_sina"
+            android:gravity="center_horizontal"
+            android:text="新浪微博"
+            android:textColor="#888888"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/qqFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/image_to_text"
+            android:drawableTop="@drawable/share_qq"
+            android:gravity="center_horizontal"
+            android:text="QQ好友"
+            android:textColor="#888888"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+
+    <com.huapu.huafen.views.loopviewpager.CustomViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/shareBottomLayout"
+        android:clipToPadding="false"
+        android:paddingLeft="65dp"
+        android:paddingRight="65dp"
+        android:visibility="visible"
+        app:orientation="horizontal" />
+
+
+</RelativeLayout>

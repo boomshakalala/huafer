@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/fans"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text="按粉丝" />
+
+    <TextView
+        android:id="@+id/activeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/fans"
+        android:gravity="center_vertical"
+        android:text="按活跃" />
+
+    <TextView
+        android:id="@+id/newJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/activeUser"
+        android:gravity="center_vertical"
+        android:text="新加入"
+        android:textColor="@color/base_pink" />
+</RelativeLayout>

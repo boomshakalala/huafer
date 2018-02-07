@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pop_search_switch_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutSwitchProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/item_margin" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pop_search_goods" />
+
+        <TextView
+            android:id="@+id/tvProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宝贝"
+            android:layout_marginLeft="@dimen/pop_margin_left"
+            style="@style/bigTextWhite" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/base_pop_divider" />
+
+    <LinearLayout
+        android:id="@+id/layoutSwitchPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/item_margin" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pop_search_personal" />
+
+        <TextView
+            android:id="@+id/tvPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户"
+            android:layout_marginLeft="@dimen/pop_margin_left"
+            style="@style/bigTextWhite" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/base_pop_divider" />
+    <LinearLayout
+        android:id="@+id/layoutSwitchStar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/item_margin" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pop_search_star" />
+
+        <TextView
+            android:id="@+id/tvStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="明星"
+            android:layout_marginLeft="@dimen/pop_margin_left"
+            style="@style/bigTextWhite" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/base_pop_divider" />
+</LinearLayout>

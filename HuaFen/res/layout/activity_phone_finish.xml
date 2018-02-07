@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical" >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/icon_phone_bind"/>
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/ts_title_32"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_color"/>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绑定成功"
+                android:textColor="@color/base_pink_light"
+                android:drawableLeft="@drawable/icon_free_delivery_select"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/image_to_text"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

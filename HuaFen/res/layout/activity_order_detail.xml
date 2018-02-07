@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.huapu.huafen.views.PtrDefaultFrameLayout
+            android:id="@+id/ptrFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:id="@+id/scrollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--订单状态view-->
+                    <com.huapu.huafen.views.OrderTopView
+                        android:id="@+id/orderTopView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!--订单历史-->
+                    <include
+                        layout="@layout/order_history_layout"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                    <!--中间订单内容-->
+                    <FrameLayout
+                        android:id="@+id/flContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/item_margin"
+                        android:layout_marginTop="@dimen/item_margin"
+                        android:background="@color/white">
+                        <!--买家-->
+                        <include
+                            layout="@layout/order_buyer_container"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
+
+                        <!--卖家-->
+                        <include
+                            layout="@layout/order_seller_container"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </com.huapu.huafen.views.PtrDefaultFrameLayout>
+
+        <View style="@style/divider_line_horizontal" />
+
+        <!--底部按钮区域-->
+        <com.huapu.huafen.views.OrderDetailBottom
+            android:id="@+id/orderDetailBottom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <com.huapu.huafen.views.HLoadingStateView
+        android:id="@+id/loadingStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone" />
+</FrameLayout>

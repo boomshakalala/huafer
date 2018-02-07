@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/good_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/default_pic"
+        fresco:placeholderImageScaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/good_tv"
+        style="@style/normalText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.huapu.huafen.views.CommonPriceView
+        android:id="@+id/price_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</merge>

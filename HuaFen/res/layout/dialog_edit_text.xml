@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/commonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/base_bg"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/disCardText"
+                    style="@style/normalTextGray"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="放弃" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="@color/divider_black" />
+
+                <TextView
+                    android:id="@+id/saveText"
+                    style="@style/normalTextGray"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="保存" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/operateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/commonLayout"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/cutImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/cut_image"
+                    android:gravity="center"
+                    android:text="裁剪"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/rotateImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/rotate_image"
+                    android:gravity="center"
+                    android:text="旋转"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/lightenImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/lighten_image"
+                    android:gravity="center"
+                    android:text="加亮"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/scaleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/bottomCutLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/closeImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/close_cut" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="@color/divider_black" />
+
+                <ImageView
+                    android:id="@+id/confirmImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/confirm_cut" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/bottomCutLayout"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/onePointOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@drawable/moment_edit_pic_one_point_one"
+                        android:gravity="center"
+                        android:text="1:1"
+                        android:textColor="@color/comment_title_rb_selector"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/threePointFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@drawable/moment_edit_pic_three_point_four"
+                        android:gravity="center"
+                        android:text="3:4"
+                        android:textColor="@color/comment_title_rb_selector"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/fourPointThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@drawable/moment_edit_pic_four_point_three"
+                        android:gravity="center"
+                        android:text="4:3"
+                        android:textColor="@color/comment_title_rb_selector"
+                        android:textSize="12sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <com.huapu.huafen.views.ClipSquareImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout" />
+</RelativeLayout>

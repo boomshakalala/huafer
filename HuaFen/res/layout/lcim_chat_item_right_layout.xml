@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="@dimen/lcim_chat_horizontal_margin"
+    android:layout_marginRight="@dimen/lcim_chat_horizontal_margin"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/chat_right_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_gray_rect_bg2"
+        android:gravity="center"
+        android:text=" MM月dd日 HH:mm"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/chat_right_iv_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="#1F000000"
+            fresco:roundingBorderWidth="0.5dp" />
+
+        <LinearLayout
+            android:id="@+id/chat_right_layout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/chat_right_iv_avatar"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp" />
+
+        <FrameLayout
+            android:id="@+id/chat_right_layout_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/chat_right_layout_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/chat_right_progressbar"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Small"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/chat_right_tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已发送"
+                android:textColor="#000"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/chat_right_tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/lcim_chat_resend_bg"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/chat_right_tv_name"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:visibility="gone" />
+</LinearLayout>

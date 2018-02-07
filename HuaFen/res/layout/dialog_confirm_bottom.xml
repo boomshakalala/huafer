@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+    <View
+        android:id="@+id/blankSpace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toast_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top" >
+
+            <TextView
+                android:id="@+id/dialog_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_white_round_gray_stroke_bg"
+                android:gravity="center"
+                android:paddingLeft="@dimen/side"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="取消"
+                android:textColor="@color/base_pink"
+                android:textSize="@dimen/ts_des_28" />
+
+            <TextView
+                android:id="@+id/dialog_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_pink_round_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/side"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_des_28" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:layout_marginTop="5dp"
+            android:background="@color/base_pink" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_marginLeft="@dimen/side"
+                    android:id="@+id/tvSellerPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/ts_small_24"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_divider_height"
+                android:background="@color/divider_black" />
+            <TextView
+                android:layout_marginRight="@dimen/side"
+                android:layout_marginLeft="@dimen/side"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/ts_20"
+                android:padding="10dp"
+                android:text="确认收货后，交易将结束。请您确认已收到物品，并检查物品状态。"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_divider_height"
+                android:background="@color/divider_black" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <EditText
+                    android:layout_marginLeft="@dimen/side"
+                    android:id="@+id/etVerificationCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btnVerificationCode"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/customer_photo_margin_top"
+                    android:background="@drawable/identifying"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="@dimen/side"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

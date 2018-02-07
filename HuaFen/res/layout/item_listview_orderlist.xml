@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp" >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivProPic"
+                style="@style/styleAvatarBig"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tvOrderUnRead"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_read_text_bg"
+                android:gravity="center"
+                style="@style/smallTextWhite" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    tools:text="22222" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/tvDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="333"
+                android:textColor="#333"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:paddingTop="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvOperationRemark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    tools:text="11111"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    style="@style/smallTextGray" />
+
+                <TextView
+                    android:id="@+id/tvTarget"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buy_bg"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

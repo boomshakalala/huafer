@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/rotate_header_web_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        app:ptr_duration_to_close="200"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+
+        <com.huapu.huafen.scrollablelayoutlib.ScrollableLayout
+            android:id="@+id/scrollableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+                <!-- 头布局header -->
+                <include
+                    android:id="@+id/inHeader"
+                    layout="@layout/view_headview_personal_home" />
+                <!-- 头布局 end -->
+            </RelativeLayout>
+
+            <com.huapu.huafen.scrollablelayoutlib.PagerSlidingTabStrip
+                android:id="@+id/pagerStrip"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpPerson"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.huapu.huafen.scrollablelayoutlib.ScrollableLayout>
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <com.huapu.huafen.views.HLoadingStateView
+        android:id="@+id/loadingStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ViewStub
+        android:id="@+id/view_blocked_vs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/view_blocked" />
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_title_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/tvTitleText"
+            style="@style/largeText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:gravity="center"
+            tools:text="aaa" />
+
+        <RelativeLayout
+            android:id="@+id/layoutLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp">
+
+            <Button
+                android:id="@+id/btnTitleLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/personal_title_back" />
+
+            <Button
+                android:id="@+id/btnTitleLeft2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/personal_title_back_close" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp">
+
+            <Button
+                android:id="@+id/btnTitleRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/personal_title_share" />
+
+            <Button
+                android:id="@+id/btnTitleRight2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/personal_title_share_close" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/layoutMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp">
+
+            <Button
+                android:id="@+id/btnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/personal_title_more" />
+
+            <Button
+                android:id="@+id/btnMore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/personal_title_more_close" />
+
+            <TextView
+                android:id="@+id/tvUnRead"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circle_read_text_bg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_20" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineTitle"
+        style="@style/divider_line_horizontal"
+        android:layout_below="@id/layoutTitle" />
+
+</RelativeLayout>

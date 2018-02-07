@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivHeader"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:padding="3dp"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/ivHeader"
+            android:layout_toLeftOf="@+id/layoutFollow"
+            android:id="@+id/linearLayout">
+
+            <com.huapu.huafen.views.CommonTitleView
+                android:id="@+id/ctvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvStarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/ts_des_28"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvFansCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/ts_small_24" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/ivFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_follow_item_seletor"/>
+            <TextView
+                android:id="@+id/tvFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="加关注"
+                android:textColor="@color/base_pink"
+                android:background="@drawable/text_white_round_pink_stroke_bg"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/base_tab_bar_divider" />
+</LinearLayout>

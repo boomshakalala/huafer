@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/layoutItem"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivHeader"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            tools:src="@drawable/default_head"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+            <com.huapu.huafen.views.CommonTitleView
+                android:id="@+id/ctvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.huapu.huafen.views.DashLineView
+                android:layout_marginTop="3dp"
+                android:id="@+id/dlvLocation"
+                android:visibility="gone"
+                tools:visibility="gone"
+                style="@style/dash_line_view_location_without_bg"
+                />
+            <TextView
+                android:id="@+id/tvAuth"
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/normalTextGray"
+                tools:text="演员孙俪"
+                android:maxLines="1"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvFansCountAndSellingCountDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                style="@style/normalTextGray"
+                tools:text="粉丝：48万 商品：22"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/follow_add"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/tvFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                tools:background="@drawable/text_white_round_pink_stroke_bg"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                tools:text="加关注"
+                style="@style/smallTextPink" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

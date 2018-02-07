@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_title_height"
+        android:background="@color/base_title_bar_bg"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_toLeftOf="@+id/btnSearchCancel"
+            android:background="@drawable/text_gray_round_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@+id/layoutSwitch"
+                android:background="@drawable/btn_title_search_pink"/>
+
+            <EditText
+                android:id="@+id/etSearch"
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/ivDeleteSearch"
+                android:layout_toRightOf="@id/ivSearch"
+                android:background="@null"
+                android:hint="输入商品名"
+                android:imeOptions="actionSearch"
+                android:maxLength="8"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:id="@id/ivDeleteSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_right"
+                android:background="@drawable/btn_search_cancel"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@id/btnSearchCancel"
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="取消"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/divider_line_horizontal"/>
+
+    <com.huapu.huafen.views.PtrDefaultFrameLayout
+        android:id="@+id/ptrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.huapu.huafen.views.PtrDefaultFrameLayout>
+
+</LinearLayout>

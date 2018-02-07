@@ -1,0 +1,174 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.jakewharton.butterknife'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':pulltorefreshlibrary')
+    compile project(':NumberPicker')
+    compile project(':SpannableLib')
+    compile project(':NewPullToRefreshLib')
+    compile project(':Cropper')
+    compile project(":leancloudchatkit")
+    compile project(':ShareSDK')
+    compile project(path: ':Video')
+    compile files('libs/AMap_Location_V3.00_20160922.jar')
+    compile files('libs/AMap_Search_V5.0.0_20170309.jar')
+    compile files('libs/app-monitor-sdk-2.5.1.1_for_bc_proguard.jar')
+    compile files('libs/alicloud-android-utils-1.0.3.jar')
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.4@aar') {
+        transitive = true;
+    }
+    compile "com.android.support:recyclerview-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:design:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:cardview-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:support-v4:$ANDROID_SUPPORT_VERSION"
+    compile 'com.android.support:multidex:1.0.1'
+    compile('com.android.support:support-v4:21.0.3')
+    compile(name: 'alicloud-android-feedback-3.0.0', ext: 'aar')
+    compile 'com.alibaba:fastjson:1.2.32'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.facebook.fresco:fresco:1.5.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.umeng.analytics:analytics:6.1.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.belerweb:pinyin4j:2.5.1'
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+
+    // LeanCloud 基础包
+    compile('cn.leancloud.android:avoscloud-sdk:v4.4.4')
+    // LeanCloud 小米推送的包
+    compile('cn.leancloud.android:avoscloud-mixpush:v4.4.4@aar')
+    // LeanCloud 华为推送的包
+    compile('cn.leancloud.android:avoscloud-mixpush:v4.4.4@aar')
+    //LeanCloud 魅族推送的包
+    compile('cn.leancloud.android:avoscloud-mixpush:v4.4.4@aar')
+    compile('com.meizu.flyme.internet:push-internal-publish:3.3.170123@aar')
+
+    // 推送与实时聊天需要的包
+    compile('cn.leancloud.android:avoscloud-push:v4.4.4@aar') { transitive = true }
+    // LeanCloud 统计包
+    compile('cn.leancloud.android:avoscloud-statistics:v4.4.4')
+    compile 'com.qiyukf.unicorn:unicorn:3.10.0'
+    //compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.zhy:magic-viewpager:1.0.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+}
+
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//def APK_SIGNING_KEYSTORE = properties.getProperty('APK_SIGNING_KEYSTORE')
+//def APK_SIGNING_STOREPASS = properties.getProperty('APK_SIGNING_STOREPASS')
+//def APK_SIGNING_KEYALIAS = properties.getProperty('APK_SIGNING_KEYALIAS')
+//def APK_SIGNING_KEYPASS = properties.getProperty('APK_SIGNING_KEYPASS')
+
+
+android {
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+    defaultConfig {
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
+        // Enabling multidex support.
+        multiDexEnabled true
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g" // 2g should be also OK
+    }
+
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = []
+            }
+            dx.additionalParameters += '--multi-dex' // enable multidex
+
+            // optional
+            // dx.additionalParameters += "--main-dex-list=$projectDir/<filename>".toString() // enable the main-dex-list
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    signingConfigs {
+        debug {
+            storeFile file("./key/debugkey/huafen.keystore")
+        }
+        release {
+            //打包
+            //storeFile file(APK_SIGNING_KEYSTORE ?: "APK_SIGNING_KEYSTORE")
+            //storePassword APK_SIGNING_STOREPASS ?: "APK_SIGNING_STOREPASS"
+            //keyAlias APK_SIGNING_KEYALIAS ?: "APK_SIGNING_KEYALIAS"
+            //keyPassword APK_SIGNING_KEYPASS ?: "APK_SIGNING_KEYPASS"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled true // 是否混淆
+            shrinkResources true // 是否去除无效的资源文件
+            ext.enableCrashlytics = false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}

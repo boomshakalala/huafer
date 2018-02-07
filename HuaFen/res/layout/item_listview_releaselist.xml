@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlWatering"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvWaterDesc"
+                style="@style/smallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/water_icon_tip"
+                android:gravity="center_vertical"
+                tools:text="90天后自动下架" />
+
+            <View
+                style="@style/divider_line_horizontal"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                style="@style/styleLayoutItem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/flGoods"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/goodsImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="left"
+                        fresco:actualImageScaleType="focusCrop"
+                        fresco:placeholderImage="@drawable/default_pic"
+                        fresco:placeholderImageScaleType="focusCrop" />
+
+                    <FrameLayout
+                        android:id="@+id/flAuctionIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp"
+                        android:layout_gravity="bottom"
+                        android:background="#80AEA9D7">
+
+                        <TextView
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/auction_icon_small"
+                            android:drawablePadding="5dp"
+                            android:text="拍卖" />
+
+                    </FrameLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/flGoods"
+                    android:layout_marginLeft="@dimen/item_margin"
+                    android:layout_toRightOf="@+id/flGoods"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvGoodsName"
+                        style="@style/bigText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        tools:text="啊啊所大大 | Ada大多111111111111111111111111" />
+
+                    <TextView
+                        android:id="@+id/tvPreview"
+                        style="@style/smallTextBlackEnable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:visibility="gone"
+                        tools:text="11111人浏览"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAuctionPrice"
+                    style="@style/normalTextPink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_margin"
+                    android:layout_toRightOf="@id/flGoods"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="起拍价： 98" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/flGoods"
+                    android:layout_marginLeft="@dimen/item_margin"
+                    android:layout_toRightOf="@id/flGoods">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/tvPrice"
+                            style="@style/normalTextPink"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            tools:text="111" />
+
+                        <TextView
+                            android:id="@+id/tvPastPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/ts_small_24" />
+
+                        <TextView
+                            android:id="@+id/tvAuctionTime"
+                            style="@style/smallTextGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="07月25日 16：16结束" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvLikeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:drawableLeft="@drawable/btn_item_like_select"
+                        android:drawablePadding="3dp"
+                        android:textColor="@color/base_pink"
+                        android:textSize="@dimen/ts_small_24"
+                        tools:text="11111" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_release_audit_states"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            style="@style/divider_line_horizontal"
+            android:layout_width="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/layoutReason"
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvReason"
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                android:singleLine="true"
+                android:text="下架" />
+
+            <LinearLayout
+                android:id="@+id/layoutActionReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="查看"
+                    android:textColor="@color/text_color_gray" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/right_enter" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewReason"
+            style="@style/divider_line_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvWater"
+                style="@style/smallTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp"
+                android:text="浇水"
+                android:textColor="@color/white"
+                tools:background="@drawable/water_blue_bg" />
+
+            <TextView
+                android:id="@+id/tvBidCount"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/side"
+                android:paddingRight="10dp"
+                android:text="0人出价" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvBtnDel"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/text_white_round_gray_stroke_bg"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="6dp"
+                    android:text="删除"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvBtnDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/text_white_round_gray_stroke_bg"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="6dp"
+                    android:text="下架"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvJoinCampaign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/text_white_round_gray_stroke_bg"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="6dp"
+                    android:text="参加活动"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvBtnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/text_white_round_gray_stroke_bg"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="6dp"
+                    android:text="编辑"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvBtnShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/text_white_round_gray_stroke_bg"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="6dp"
+                    android:text="分享"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="13sp" />
+                <ImageView
+                    android:id="@+id/ivMoreBtn"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_goods_more"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

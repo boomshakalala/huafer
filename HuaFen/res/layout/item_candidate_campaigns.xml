@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivCampaign"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        fresco:actualImageScaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp">
+        <TextView
+            android:id="@+id/tvCampaignTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:textColor="@color/text_black"
+            />
+        <TextView
+            android:id="@+id/tvCampaignDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="11sp"
+            android:textColor="@color/text_color_gray" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivCampaignCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_join_campaign_check"/>
+
+
+</LinearLayout>

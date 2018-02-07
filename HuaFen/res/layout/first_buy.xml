@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/flPager"
+        android:layout_width="300dp"
+        android:layout_height="431dp"
+        android:layout_centerInParent="true"
+        >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="300dp"
+            android:layout_height="431dp"
+            />
+        <com.huapu.huafen.looper.IndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="60dp"
+            />
+        <ImageView
+            android:id="@+id/ivIKnow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/i_know"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="15dp"
+            />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/flPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/first_buy_del"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

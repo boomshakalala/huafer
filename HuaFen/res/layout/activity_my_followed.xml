@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <com.huapu.huafen.scrollablelayoutlib.PagerSlidingTabStrip
+        android:id="@+id/my_followed_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_bottom_line"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        app:pstsIndicatorColor="@color/base_pink"
+        app:pstsIndicatorPadding="32dp"
+        app:pstsShouldExpand="true"
+        app:pstsTabPaddingLeftRight="16dp"
+        app:pstsTabTextColor="@color/text_color_gray"
+        app:pstsTabTextSize="14sp"
+        app:pstsUnderlineHeight="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/my_followed_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

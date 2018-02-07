@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        style="@style/divider_line_horizontal"/>
+    <RelativeLayout
+        android:id="@+id/layoutGoods"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivGoodsPic"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="@dimen/side"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/layoutDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvBtnSend"
+                    android:orientation="vertical">
+
+                    <com.huapu.huafen.views.DashLineView
+                        android:id="@+id/dlvGoodsName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:dashLineStyle="bigBlack" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tvVisitCount"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <com.huapu.huafen.views.CommonPriceView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/cpvPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/tvSellPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/normalTextPink"
+                            android:layout_marginRight="5dp"
+                            tools:text="1111"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvIsFreeDelivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/text_free_delivery_bg"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="包邮"
+                            android:singleLine="true"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ts_small_24" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvBtnSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_rectangle_transparent_pink_light_stroke_bg"
+                    android:text="立即购买"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/base_pink_light"
+                    android:textSize="14sp"
+                    android:layout_marginRight="@dimen/side"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:background="@color/base_tab_bar_divider"
+        />
+    <LinearLayout
+        android:id="@+id/llBtnToDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/image_to_text"
+        android:layout_marginBottom="@dimen/image_to_text"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/normalText"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:layout_marginLeft="@dimen/side"
+            android:drawablePadding="@dimen/image_to_text"
+            android:drawableLeft="@drawable/chat_tip_icon"
+            android:text="请勿轻信他人诱导，拒绝脱离平台交易！"/>
+        <TextView
+            android:layout_marginRight="@dimen/side"
+            android:id="@+id/tvBtnToDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/link_blue"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:drawableRight="@drawable/right_enter"
+            />
+    </LinearLayout>
+    <fragment
+        android:id="@+id/conversation"
+        android:name="io.rong.imkit.fragment.ConversationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

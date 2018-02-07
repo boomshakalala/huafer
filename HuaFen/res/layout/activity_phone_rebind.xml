@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/icon_phone_bind" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_title_32" />
+
+                <LinearLayout
+                    android:id="@+id/llRebind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:text="注意账号安全，切勿轻易更换，7天内只允许更换一次"
+                        android:textColor="@color/base_pink"
+                        android:textSize="@dimen/ts_title_32" />
+
+                    <Button
+                        android:id="@+id/btnChangePhone"
+                        android:layout_width="327dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/text_white_round_bg"
+                        android:gravity="center"
+                        android:text="更换手机号"
+                        android:textColor="@color/base_pink"
+                        android:textSize="@dimen/ts_title_32" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEditPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            android:id="@+id/tvPhoneDes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/etPhoneNum"
+                            android:drawableLeft="@drawable/phonenumber_person"
+                            android:drawablePadding="3dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/etPhoneNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toRightOf="@id/tvPhoneDes"
+                            android:background="@null"
+                            android:hint="请输入手机号码"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:padding="5dp"
+                            android:textSize="16sp" />
+
+                        <!--<Button
+                            android:id="@id/btnVerificationCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/customer_photo_margin_top"
+                            android:background="@drawable/identifying"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:textSize="12sp"
+                            android:visibility="visible"
+                            android:layout_alignBaseline="@+id/etPhoneNum"
+                            android:layout_alignBottom="@+id/etPhoneNum"
+                            android:layout_alignRight="@+id/etPhoneNum"
+                            android:layout_alignEnd="@+id/etPhoneNum"/>-->
+                        <Button
+                            android:id="@id/btnVerificationCode"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/etPhoneNum"
+                            android:layout_alignBottom="@+id/etPhoneNum"
+                            android:layout_alignEnd="@+id/etPhoneNum"
+                            android:layout_alignRight="@+id/etPhoneNum"
+                            android:background="@drawable/text_phone_color"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="获取验证码"
+                            android:textColor="@color/base_pink"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+
+                        <View
+                            android:id="@+id/viewMidCutLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/base_divider_height"
+                            android:layout_below="@id/etPhoneNum"
+                            android:background="@color/base_tab_bar_divider" />
+
+                        <TextView
+                            android:id="@+id/tvVerifyCodeDes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/etVerificationCode"
+                            android:layout_below="@id/viewMidCutLine"
+                            android:drawableLeft="@drawable/phonepassword"
+                            android:drawablePadding="3dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/etVerificationCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/viewMidCutLine"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/btnVerificationCode"
+                            android:layout_toRightOf="@id/tvVerifyCodeDes"
+                            android:background="@null"
+                            android:hint="请输入验证码"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:visibility="visible" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCantReceive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="left"
+                            android:text="@string/getSpeechCode"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/speechTextTips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="12dp"
+                            android:gravity="left"
+                            android:text="@string/attention_listen"
+                            android:textColor="@color/base_pink"
+                            android:visibility="invisible" />
+
+                        <Button
+                            android:id="@+id/btnSureToBind"
+                            style="@style/bigTextWhite"
+                            android:layout_width="327dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/text_pink_round_bg"
+                            android:text="确认绑定" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

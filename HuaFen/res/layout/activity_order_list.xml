@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg" >
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		android:id="@+id/orderListView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:focusable="true"
+		android:divider="@null"
+		android:focusableInTouchMode="true"
+		android:visibility="visible" />
+	<View
+		android:id="@+id/blankSpace"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/base_bg"
+		android:visibility="visible"
+		/>
+</FrameLayout>

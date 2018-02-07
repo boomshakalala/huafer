@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/normalText"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side"
+        android:text="历史记录"
+        />
+
+    <com.huapu.huafen.views.flowlayout.TagFlowLayout
+        android:id="@+id/tagFlowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side"
+        android:layout_marginBottom="10dp"
+        />
+
+</merge>

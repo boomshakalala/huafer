@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/orderTopBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/order_top_default_bg"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:viewAspectRatio="2.5"
+        />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fresco:placeholderImage="@drawable/order_top_overlay_bg"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:viewAspectRatio="2.5"
+        />
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side"
+        android:paddingBottom="6.5dp"
+        >
+        <LinearLayout
+            android:id="@+id/llOrderState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <com.huapu.huafen.views.OrderStateView
+                android:id="@+id/orderStateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                >
+                <TextView
+                    android:id="@+id/tvOrderStateDes"
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/bigTextWhite"
+                    tools:text="待收货"
+                    />
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/tvCountdownDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/smallTextWhite"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    tools:text="9天23小时59分60秒后 等待买家确认收获，请及时关注物流状态"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOrderCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_order_details_return" />
+
+            <TextView
+                android:id="@+id/tvOrderCancelDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_right"
+                android:layout_marginRight="@dimen/margin_left"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                style="@style/normalTextWhite"
+                tools:text="订单取消"/>
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:id="@+id/tvCancelCountDownDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/smallTextWhite"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                tools:text="11111111111111"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+    
+    
+
+
+</merge>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+
+    <TextView
+        android:id="@+id/tvContactTa"
+        android:text="联系TA"
+        style="@style/goods_detail_bottom_contact_style"
+        />
+    <View
+        style="@style/divider_line_vertical"/>
+    <TextView
+        android:id="@+id/tvFavorable"
+        android:text="收藏"
+        style="@style/goods_detail_bottom_style_fav"/>
+</merge>

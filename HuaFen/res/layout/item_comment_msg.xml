@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/styleLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivHeader"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/default_pic"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/divider_black"
+                fresco:roundingBorderWidth="0.5dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/ivHeader"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvCommentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:textColor="@color/text_black_light"
+                    android:textSize="10sp"
+                    tools:text="01-09 19:00" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.huapu.huafen.views.HLinkTextView
+            android:id="@+id/hltvContent"
+            style="@style/smallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_top"
+            android:layout_marginLeft="44dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivGoodsPic"
+            style="@style/styleAvatarBig"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_pic"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundingBorderColor="@color/divider_black"
+            fresco:roundingBorderWidth="0.5dp" />
+    </RelativeLayout>
+
+    <View style="@style/divider_line_horizontal" />
+</LinearLayout>

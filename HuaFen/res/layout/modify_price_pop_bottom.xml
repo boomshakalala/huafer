@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/blankSpace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        />
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/llPrice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/normalText"
+                    android:text="卖价"
+                    android:gravity="center_vertical"
+                    />
+                <EditText
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/etPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="¥0"
+                    android:textColorHint="@color/text_black_enable"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_des_28"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvBtnConfirm1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/base_pink"
+                android:gravity="center"
+                android:text="确定"
+                style="@style/normalTextWhite" />
+        </LinearLayout>
+        <View
+            style="@style/divider_line_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/llPostage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/side"
+                android:paddingRight="@dimen/side"
+                >
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chbFree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:button="@null"
+                        android:drawableRight="@drawable/postage_selector"
+                        style="@style/normalText"
+                        android:drawablePadding="25dp"
+                        android:text="包邮"
+                        />
+
+
+                </FrameLayout>
+                <View
+                    style="@style/divider_line_vertical"/>
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/side"
+                        android:id="@+id/chbPostpaid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:button="@null"
+                        android:drawableRight="@drawable/postage_selector"
+                        style="@style/normalText"
+                        android:drawablePadding="25dp"
+                        android:text="邮费到付"
+                        />
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <View
+                style="@style/divider_line_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        style="@style/normalText"
+                        android:text="邮费"
+                        android:gravity="center_vertical"
+                        />
+                    <EditText
+                        android:layout_marginLeft="25dp"
+                        android:id="@+id/etPostage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint="¥0"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_black_enable"
+                        android:textSize="@dimen/ts_des_28" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvBtnConfirm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/base_pink"
+                    android:gravity="center"
+                    android:text="确定"
+                    style="@style/normalTextWhite" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

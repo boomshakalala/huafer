@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/base_bg" />
+    <!--头像和名字-->
+    <LinearLayout
+        style="@style/styleLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivHeader"
+            style="@style/styleAvatarNormal"
+            android:contentDescription="@null"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:placeholderImage="@drawable/default_head"
+            fresco:roundAsCircle="true" />
+
+        <com.huapu.huafen.views.CommonTitleView
+            android:id="@+id/ctvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+    <!--收货人和收货地址-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/side"
+        android:layout_marginRight="@dimen/side"
+        android:background="@drawable/grey_round_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收货人    ：" />
+
+            <TextView
+                android:id="@+id/tvReceiver"
+                style="@style/normalText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                tools:text="打卡老客户收到了快快乐乐aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_to_text">
+
+            <TextView
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收货地址：" />
+
+            <TextView
+                android:id="@+id/tvShippingAddress"
+                style="@style/normalText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                tools:text="打卡老客户收到了aaaassdadsadasdadsasdsdasasdasdadsaasssssssssssssssssssdddddddddddddd快快乐乐" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--物品-->
+    <com.huapu.huafen.views.OrderListView
+        android:id="@+id/orderListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLinkTA"
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_gray_round_bg"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:text="联系TA" />
+
+        <TextView
+            android:id="@+id/tvBatchDelivery"
+            style="@style/normalTextPink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="@dimen/side"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_white_round_pink_stroke_bg"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:text="批量发货" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

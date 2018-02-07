@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="37.5dp"
+            android:layout_marginRight="37.5dp"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pop_cargo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37.5dp"
+            android:layout_marginRight="37.5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_pop_cargo"
+                style="@style/normalTextWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/cargo_dd"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="从我的店铺中选取商品" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/home_right_arrow" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="37.5dp"
+            android:layout_marginRight="37.5dp"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_pop_brand"
+                style="@style/normalTextWhite"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/pop_item_shape"
+                android:gravity="center"
+                android:text="品牌" />
+
+            <TextView
+                android:id="@+id/tv_pop_site"
+                style="@style/normalTextWhite"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/pop_item_shape"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="地点" />
+
+            <TextView
+                android:id="@+id/tv_pop_else"
+                style="@style/normalTextWhite"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/pop_item_shape"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="其他" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cargo_delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

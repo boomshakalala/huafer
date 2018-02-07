@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:gravity="center_horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/personLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/personPic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/ic_action_search"
+                        fresco:viewAspectRatio="1.0" />
+
+                    <TextView
+                        android:id="@+id/personName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/personPic"
+                        android:text="22"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <com.huapu.huafen.views.CommonTitleView
+                        android:id="@+id/ctvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+
+                    <ImageView
+                        android:id="@+id/specialImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/earnMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/personLayout"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:textColor="#333333"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginRight="7.5dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="点击输入你的心情"
+            android:lines="2"
+            android:maxLength="90"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="#333333"
+            android:textColorHint="#cccccc"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

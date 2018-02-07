@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/article_publish_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/articleSections"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <View style="@style/divider_line_horizontal" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side">
+
+            <TextView
+                android:id="@+id/tvPublish"
+                style="@style/bigTextWhite"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/immediately_selector"
+                android:gravity="center"
+                android:text="发布" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

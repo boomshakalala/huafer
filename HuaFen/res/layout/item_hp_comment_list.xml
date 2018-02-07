@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginTop="5dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivHeader"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:placeholderImage="@drawable/default_head"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/tvCommentTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/pink_bg_shape"
+                android:text="店主"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/image_to_text"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/ivReply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/side"
+                    android:padding="5dp"
+                    android:src="@drawable/btn_comment_reply" />
+
+                <TextView
+                    android:id="@+id/tvLike"
+                    style="@style/smallTextBlackEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ivReply"
+                    android:drawableLeft="@drawable/btn_comment_like_states"
+                    android:drawablePadding="5dp"
+                    android:padding="5dp"
+                    tools:text="2222" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvCommentTime"
+                style="@style/smallTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:maxLines="1"
+                tools:text="01-09 19:00" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingRight="@dimen/side"
+                tools:text="三十岁asdasdasdsadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" />
+
+            <LinearLayout
+                android:id="@+id/replyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/tvReplyMore"
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_bg"
+                android:padding="5dp"
+                android:visibility="gone"
+                tools:text="杨光等多人回复" />
+
+            <View
+                style="@style/divider_line_horizontal"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+            android:id="@+id/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layoutBase"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/base_title_height"
+            android:background="@color/base_title_bar_bg" >
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_title_back_normal" />
+
+            <TextView
+                android:id="@+id/tvTitleGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/app_name"
+                style="@style/bigText" />
+
+            <Button
+                android:id="@+id/btnRightChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_right"
+                android:background="@drawable/btn_album_item_seletor"
+                android:clickable="false"
+                android:textColor="@color/base_pink"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:background="@color/divider_black" />
+    </LinearLayout>
+
+    <ru.truba.touchgallery.GalleryWidget.GalleryViewPager
+        android:id="@+id/viewer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <com.huapu.huafen.looper.IndicatorView
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        />
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/side"
+            android:background="@null"
+            android:text="完成"
+            android:textColor="@color/base_pink" />
+        <Button
+            android:id="@+id/btnNothing"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:visibility="invisible"
+            android:paddingRight="@dimen/side"
+            android:background="@null"
+            android:text="完成"
+            android:textColor="@color/base_pink" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btnFinish"
+            android:layout_toRightOf="@+id/btnNothing"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnDraw"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="编辑"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:background="@drawable/btn_shape"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:background="@drawable/btn_shape"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:text="剪裁"  />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

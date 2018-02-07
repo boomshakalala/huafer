@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/normalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="50dp"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        tools:text="Cat Noon"/>
+
+    <LinearLayout
+        android:id="@+id/layoutImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="-50dp">
+        <ImageView
+            android:id="@+id/ivXING"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/icon_xing"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/ivVIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/text_to_text"
+            android:src="@drawable/icon_vip"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/ivXIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/text_to_text"
+            android:src="@drawable/icon_xin"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+        <ImageView
+            android:id="@+id/ivZMxy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/text_to_text"
+            android:src="@drawable/iv_zm"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</merge>

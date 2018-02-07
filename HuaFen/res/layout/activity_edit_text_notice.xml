@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:focusable="true"
+        android:layout_below="@id/layout_title_bar"
+        android:focusableInTouchMode="true"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/etNotice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="告诉粉丝们，你想说的"
+            android:maxLength="200"
+            android:textSize="@dimen/ts_des_28" />
+
+        <TextView
+            android:id="@+id/tvInputCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="0/200"
+            style="@style/normalTextGray" />
+    </RelativeLayout>
+
+</RelativeLayout>

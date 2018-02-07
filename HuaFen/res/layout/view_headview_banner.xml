@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutBanner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.huapu.huafen.views.ClassBannerView
+        android:id="@+id/bannerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/rule"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        fresco:placeholderImage="@drawable/one_yuan_rule_btn"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:viewAspectRatio="3.65"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        />
+
+</FrameLayout>

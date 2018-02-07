@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutEmptyAction"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_title_height"
+        android:background="@color/base_title_bar_bg">
+
+        <TextView
+            android:id="@+id/tvTitleBarText"
+            style="@style/largeText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="消息" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/divider_line_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/layoutFollow"
+        style="@style/styleLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivIcon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_msg_follow"
+            android:contentDescription="@null"
+            android:padding="3dp"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivIcon1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:text="我关注的店主" />
+
+            <TextView
+                style="@style/smallTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="5dp"
+                android:text="第一时间抢好货" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--<View
+        style="@style/divider_line_horizontal"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--<View
+            style="@style/divider_line_horizontal" />-->
+
+        <RelativeLayout
+            android:id="@+id/layoutOrderList"
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivOrderIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_msg_order"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvOrderUnRead"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignRight="@+id/ivOrderIcon"
+                android:layout_alignTop="@+id/ivOrderIcon"
+                android:background="@drawable/red_point"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@id/ivOrderIcon"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="订单消息" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/ts_small_24" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvOrderMsg"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:text="暂无新订单" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/divider_line_horizontal"
+            android:layout_marginLeft="65dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutHuafenList"
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivIcon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_campaign"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvCustomerUnRead"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignRight="@+id/ivIcon2"
+                android:layout_alignTop="@+id/ivIcon2"
+                android:background="@drawable/red_point"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@id/ivIcon2"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="活动消息" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/ts_small_24" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCustomerMsg"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="暂无新消息" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/divider_line_horizontal"
+            android:layout_marginLeft="65dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutNoticeList"
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivNoticeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_notice"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvNoticeUnRead"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignRight="@+id/ivNoticeIcon"
+                android:layout_alignTop="@+id/ivNoticeIcon"
+                android:background="@drawable/red_point"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@id/ivNoticeIcon"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="通知" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/ts_small_24" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvNoticeMsg"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="暂无新消息" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/divider_line_horizontal"
+            android:layout_marginLeft="65dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutChatList"
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivChatIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_msg_order"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvChatUnRead"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignRight="@+id/ivChatIcon"
+                android:layout_alignTop="@+id/ivChatIcon"
+                android:background="@drawable/red_point"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@id/ivChatIcon"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="私信" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/ts_small_24" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvChatMsg"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:text="暂无新消息" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/divider_line_horizontal"
+            android:layout_marginLeft="65dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutCommentList"
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivCommentIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_msg_comment"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvCommentUnRead"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignRight="@+id/ivCommentIcon"
+                android:layout_alignTop="@+id/ivCommentIcon"
+                android:background="@drawable/red_point"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@id/ivCommentIcon"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="留言" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/ts_small_24" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCommentMsg"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:text="暂无新消息" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/divider_line_horizontal"
+            android:layout_marginLeft="65dp" />
+    </LinearLayout>
+
+    <!--<View
+        android:id="@+id/line"
+        style="@style/divider_line_horizontal" />-->
+
+</LinearLayout>

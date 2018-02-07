@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutGoods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivGoodPic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_pic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivGoodPic"
+            android:layout_alignTop="@id/ivGoodPic"
+            android:layout_marginLeft="@dimen/image_to_text"
+            android:layout_marginRight="@dimen/side"
+            android:layout_toRightOf="@id/ivGoodPic"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.huapu.huafen.views.DashLineView
+                android:id="@+id/dlvGoodsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dashLineStyle="bigBlack" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/pay_result_getting"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/goodsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="3dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    style="@style/bigTextPink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    tools:text="¥11" />
+
+                <TextView
+                    android:id="@+id/tvPastPrice"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
+                    tools:text="¥11" />
+
+                <TextView
+                    android:id="@+id/tvFreeDelivery"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/free_delivery_bg"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="包邮"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/base_bg" />
+</LinearLayout>

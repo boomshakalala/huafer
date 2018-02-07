@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/priceText"
+        style="@style/normalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/side"
+        android:text="价格区间" />
+
+
+    <LinearLayout
+        style="@style/styleLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side">
+
+
+        <EditText
+            android:id="@+id/etPriceLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_price_corner"
+            android:gravity="center"
+            android:hint="商品最低价"
+            android:inputType="number"
+            android:maxLength="7"
+            android:padding="5dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/base_btn_normal"
+            android:textSize="@dimen/ts_small_24" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/text_color_gray"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/etPriceHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_price_corner"
+            android:gravity="center"
+            android:hint="商品最高价"
+            android:inputType="number"
+            android:maxLength="7"
+            android:padding="5dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/base_btn_normal"
+            android:textSize="@dimen/ts_small_24" />
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="154dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/currentPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="当前价：360"
+        android:textColor="@color/text_color"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/decPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingLeft="7.5dp"
+            android:paddingRight="7.5dp"
+            android:background="#f0f0f0"
+            android:enabled="false"
+            android:gravity="center"
+            tools:text="-10000000"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/inputPrice"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#f0f0f0"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/addPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingLeft="7.5dp"
+            android:paddingRight="7.5dp"
+            android:background="#FF9BB0"
+            android:gravity="center"
+            tools:text="+10000000"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/confirmOffer"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_send_corner"
+        android:gravity="center"
+        android:text="确定出价"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

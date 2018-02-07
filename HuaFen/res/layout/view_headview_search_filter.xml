@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="选择标签" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="@dimen/side"
+            android:id="@+id/tvNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tag"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="全新"
+            android:textColor="@drawable/text_white_black_states"
+            android:textSize="@dimen/ts_small_24" />
+
+        <TextView
+            android:id="@+id/tvVIP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tag"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="VIP"
+            android:textColor="@drawable/text_white_black_states"
+            android:textSize="@dimen/ts_small_24" />
+
+        <TextView
+            android:id="@+id/tvStar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tag"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="明星"
+            android:textColor="@drawable/text_white_black_states"
+            android:textSize="@dimen/ts_small_24" />
+
+        <TextView
+            android:id="@+id/tvFreeDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tag"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="包邮"
+            android:textColor="@drawable/text_white_black_states"
+            android:textSize="@dimen/ts_small_24" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="适合年龄" />
+
+</LinearLayout>

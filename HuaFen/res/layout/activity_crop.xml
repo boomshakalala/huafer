@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <com.edmodo.cropper.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottom" />
+
+    <LinearLayout
+        android:id="@id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvBtnGiveUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_margin="1dp"
+            android:text="放弃"
+            style="@style/normalTextWhite"/>
+
+        <ImageView
+            android:id="@+id/ivBtnRotate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:src="@drawable/rotate"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/tvBtnCrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/crop"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/ivBtnColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/color"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/tvBtnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:text="保存"
+            android:gravity="right"
+            android:padding="10dp"
+            style="@style/normalTextWhite"/>
+    </LinearLayout>
+
+</RelativeLayout>

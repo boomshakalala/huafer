@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head lang="ch">
+		<script>
+			function clickGoods(){
+				if(window.androidJSBridge){
+					androidJSBridge.getShareData("{\"title\":\"分享标题\",\"content\":\"分享正文\",\"image\":\"http://img15.3lian.com/2015/f2/23/d/81.jpg\"}");
+					<!--alert(result)-->
+				}
+			}
+		</script>
+		<script>
+			function clickPersonal(){
+				if(window.androidJSBridge){
+					var result = androidJSBridge.openWindow("{\"target\":\"\",\"params\":{\"extra_user_id\":82},\"authRequired\":\"0\"}");
+					alert(result)
+				}
+			}
+		</script>
+		<script>
+			function clickGetApp(){
+				if(window.androidJSBridge){
+					var result = androidJSBridge.openWindow("{\"target\":\"com.huapu.huafen.activity.SearchGoodsListActivity\",\"params\":{\"extra_goods_detail_filter_class_first\":\"辣妈用品\",\"extra_goods_detail_filter_first_class_id\":17},\"authRequired\":\"0\"}");
+				}
+			}
+		</script>
+		<script>
+			function clickAbout(){
+				if(window.androidJSBridge){
+					var result = androidJSBridge.openWindow("{\"target\":\"com.huapu.huafen.activity.SearchGoodsListActivity\",\"params\":{\"extra_goods_detail_filter_class_second\":\"玩具图书\",\"extra_goods_detail_filter_second_class_id\":1410,\"extra_goods_detail_filter_first_class_id\":14},\"authRequired\":\"0\"}");
+				}
+			}
+		</script>
+		<script>
+			function clickError(){
+				if(window.androidJSBridge){
+					var result = androidJSBridge.openWindow("{\"target\":\"com.huapu.huafen.activity.VIPRegionActivity\",\"params\":{\"campaign_url\":\"https://api.huafer.cc/api/goods/v1/queryVIPZonePageList\",\"campaign_title\":\"VIP专区\",\"campaign_style\":1},\"authRequired\":\"0\"}");
+				}
+			}
+		</script>
+		<script>
+			function clickError1(){
+				if(window.androidJSBridge){
+					var result = androidJSBridge.openWindow("{\"target\":\"com.huapu.huafen.activity.PersonalPagerHomeActivity\",\"params\":{\"extra_user_id\":82},\"authRequired\":1}");
+					alert(result)
+				}
+			}
+		</script>
+	</head>
+<body>
+<div onclick="clickGoods()" style="width: 200px;height: 100px; background: #fff333;">分享</div>
+<div onclick="clickPersonal()" style="width: 200px;height: 100px; background: #ff6677;">target有误</div>
+<div onclick="clickGetApp()" style="width: 200px;height: 100px; background: #cccccc;">params没有参数</div>
+<div onclick="clickAbout()" style="width: 200px;height: 100px; background: #444444;">没有params</div>
+<div onclick="clickError()" style="width: 200px;height: 100px; background: #666666;">没有authRequired</div>
+<div onclick="clickError1()" style="width: 200px;height: 100px; background: #666666;">authRequired类型有误</div>
+
+</body>
+</html>

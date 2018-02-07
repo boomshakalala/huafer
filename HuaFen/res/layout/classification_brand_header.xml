@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp"
+    >
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/brandHeader"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        fresco:actualImageScaleType="fitCenter"
+        android:layout_gravity="center_vertical"/>
+        <!--fresco:roundingBorderWidth="0.5dp"-->
+        <!--fresco:roundingBorderColor="@color/base_tab_bar_divider"-->
+
+    <LinearLayout
+        android:layout_marginLeft="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/brandTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/normalText"
+            tools:text="古驰GUCCI"
+            />
+        <TextView
+            android:layout_marginTop="@dimen/text_to_text"
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:ellipsize="end"
+            style="@style/smallText"
+            tools:text="啊实打实大大是大事发生的发生的发生发生的故事的发生公司公司大概多少发鬼地方个梵蒂冈地方官"
+            />
+    </LinearLayout>
+
+</LinearLayout>

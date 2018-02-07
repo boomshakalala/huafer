@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@style/styleLayoutItem"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/goodsImage"
+            style="@style/styleCommoditySmall"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_pic"
+            fresco:placeholderImageScaleType="centerCrop"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvGoodsNameAndBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/smallText"
+            tools:text="代购的 | 全新绑带高跟鞋"
+            android:layout_toRightOf="@id/goodsImage"
+            android:layout_marginLeft="12dp"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvPriceAndPostage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/smallText"
+            tools:text="$120  (15元邮费)"
+            android:layout_toRightOf="@id/goodsImage"
+            android:layout_marginLeft="12dp"
+            android:layout_alignBottom="@id/goodsImage"
+            android:layout_marginBottom="5dp"
+            />
+        <View
+            android:id="@+id/grayLine"
+            android:layout_below="@id/goodsImage"
+            style="@style/divider_line_horizontal"
+            android:layout_alignLeft="@id/tvGoodsNameAndBrand"
+            android:layout_marginTop="@dimen/item_margin"
+            />
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_marginTop="@dimen/item_margin"
+            android:layout_below="@id/grayLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/grayLine"
+            style="@style/smallText"
+            tools:text="支付总价 ￥135"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/base_bg"
+        />
+</LinearLayout>

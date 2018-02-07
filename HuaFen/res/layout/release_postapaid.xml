@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlRoot"
+    >
+
+    <View
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    <RelativeLayout
+        android:layout_above="@id/bottom"
+        android:id="@+id/rlPostagePaid"
+        android:background="@color/white"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginRight="@dimen/side"
+            android:id="@+id/tvPostagePaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="邮费到付"
+            style="@style/normalText" />
+
+        <ImageView
+            android:id="@+id/ivPostagePaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tvPostagePaid"
+            android:src="@drawable/btn_free_delivery_selector" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_alignLeft="@id/rlPostagePaid"
+        android:layout_alignRight="@id/rlPostagePaid"
+        android:layout_below="@id/rlPostagePaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/postpaid_des_icon"
+        android:layout_marginBottom="50dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/release_flower"
+        android:layout_toLeftOf="@id/rlPostagePaid"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@id/rlPostagePaid"
+        />
+
+</RelativeLayout>

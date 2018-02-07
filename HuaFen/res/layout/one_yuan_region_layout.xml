@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    >
+    <com.huapu.huafen.views.PtrDefaultFrameLayout
+        android:id="@+id/ptrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.huapu.huafen.views.PtrDefaultFrameLayout>
+
+    <include
+        layout="@layout/one_yuan_classification"
+        />
+
+    <ImageView
+        android:id="@+id/ivRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/release_icon"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="-16dp"
+        android:layout_marginBottom="-16dp"
+        />
+
+</FrameLayout>

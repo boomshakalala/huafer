@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.huapu.huafen.views.TagsContainer
+        android:id="@+id/tagsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/rlUser"
+        style="@style/styleLayoutItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/base_tab_bar_divider"
+            fresco:roundingBorderWidth="0.5dp"
+            />
+        <LinearLayout
+            android:layout_toRightOf="@id/avatar"
+            android:layout_marginLeft="@dimen/image_to_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <com.huapu.huafen.views.CommonTitleView
+                android:id="@+id/ctvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                />
+            <LinearLayout
+                android:layout_marginTop="@dimen/text_to_text"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    style="@style/smallTextGray"
+                    android:textSize="10sp"
+                    tools:text="2017-02-14"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvWatch"
+                    android:layout_marginLeft="@dimen/item_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:drawableLeft="@drawable/page_visit"
+                    android:gravity="center_vertical"
+                    style="@style/smallTextGray"
+                    android:textSize="10sp"
+                    android:text="0"
+                    tools:text="2688"
+                    />
+                <TextView
+                    android:id="@+id/tvMessageCount"
+                    android:layout_marginLeft="@dimen/image_to_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:drawableLeft="@drawable/comment_count_icon"
+                    style="@style/smallTextGray"
+                    android:textSize="10sp"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    tools:text="657"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <com.huapu.huafen.views.FollowImageView
+            android:id="@+id/followImage"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/btn_follow_pink_default"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="@dimen/side"
+        android:layout_marginRight="@dimen/side"
+        style="@style/divider_line_horizontal"/>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/side"
+        android:layout_marginRight="@dimen/side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/bigText"
+        tools:text="苏梅岛最美酒店，看夕阳最美--康纳德conrad"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
+        />
+</LinearLayout>

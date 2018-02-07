@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/searchKeyWord"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/btn_title_search_pink"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/btn_title_search_pink"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="12dp"
+        android:textColor="@color/text_color"
+        android:textSize="14sp"
+        tools:text="搜索" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/base_tab_bar_divider" />
+</RelativeLayout>
+

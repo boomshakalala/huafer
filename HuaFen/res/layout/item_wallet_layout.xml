@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg">
+
+    <RelativeLayout
+        android:id="@+id/rlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivHeader"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_pic" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/bigText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/ivHeader"
+            android:gravity="bottom"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/tvSaveOrEarned"
+            style="@style/smallTextGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvPrice"
+            android:layout_alignTop="@id/tvPrice"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/tvPrice"
+            android:gravity="center_vertical"
+            tools:text="（赚）" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/normalTextGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tvPrice"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            tools:text="2016-12-16" />
+
+        <TextView
+            android:id="@+id/tvDes"
+            style="@style/normalTextGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivHeader"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/ivHeader"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="LV复古包balabalbalbalbalbalbalbalbaaasdadsdsadadasdasdasdsaalbalabbalalbalal" />
+
+        <TextView
+            android:id="@+id/tvFlag"
+            style="@style/smallTextWhite"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBaseline="@id/tvDes"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/buy_bg"
+            android:gravity="center"
+            android:text="买"
+            android:textSize="10dp" />
+
+        <View
+            android:id="@+id/line"
+            style="@style/divider_line_horizontal"
+            android:layout_below="@id/ivHeader"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+
+</FrameLayout>

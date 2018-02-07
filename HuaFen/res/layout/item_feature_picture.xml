@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="0dp"
+    android:layout_marginTop="0dp"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/contianer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/itemimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/default_pic"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundedCornerRadius="1dp"
+
+            />
+
+        <TextView
+            android:id="@+id/itemprice"
+            style="@style/smallTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_region"
+            android:paddingLeft="5dp"
+            android:paddingRight="4dp"
+            android:textSize="12sp" />
+
+    </FrameLayout>
+
+</FrameLayout>

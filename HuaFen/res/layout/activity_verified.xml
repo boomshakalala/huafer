@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/re_su"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/suverified_bg"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_su"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/suverified_top" />
+
+        <TextView
+            android:id="@+id/anchor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_su"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/anchor"
+            android:layout_centerHorizontal="true"
+            android:text="实名认证成功！"
+            android:textColor="@color/ali_feedback_black"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_su"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="实名认证是由花粉儿提供的一项个人身份认证服务，通过与公安网数据校验，保障个人身份真实性。"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_verified"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/verified_top" />
+
+        <LinearLayout style="@style/verified_l_style">
+
+            <TextView
+                style="@style/verified_star_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/verified_t_style"
+                android:text="真实姓名" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                style="@style/verified_e_style"
+                android:hint="请填写身份证上的姓名" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/verified_l_style">>
+
+            <TextView
+                style="@style/verified_star_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/verified_t_style"
+                android:text="身份证号" />
+
+            <EditText
+                android:id="@+id/ed_id_number"
+                style="@style/verified_e_style"
+                android:hint="请填写正确的身份证号" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/verified_l_style">>
+
+            <TextView
+                style="@style/verified_star_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/verified_t_style"
+                android:text="银行卡卡号" />
+
+            <EditText
+                android:id="@+id/ed_bc_number"
+                style="@style/verified_e_style"
+                android:hint="请输入银行卡卡号"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/verified_l_style">>
+
+            <TextView
+                style="@style/verified_star_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/verified_t_style"
+                android:text="银行预留手机号" />
+
+            <EditText
+                android:id="@+id/ed_cp_number"
+                style="@style/verified_e_style"
+                android:hint="请输入银行预留手号"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:background="@color/base_tab_bar_divider" />
+
+        <Button
+            android:id="@+id/btn_verified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rect_gray_bg"
+            android:padding="8dp"
+            android:text="开通实名认证"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+
+            />
+    </LinearLayout>
+</FrameLayout>

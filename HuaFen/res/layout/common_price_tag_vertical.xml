@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.huapu.huafen.views.CommonPriceView
+            android:id="@+id/cpvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvIsFreeDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/text_free_delivery_bg"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="包邮"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvIsNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/text_new_bg"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="全新"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvDiscount"
+            style="@style/smallTextPink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_discount_bg"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="gone"
+            tools:text="1折"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/article_cover_title" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/addSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fresco:viewAspectRatio="1.41"
+                    fresco:placeholderImage="@drawable/camera_article_text"
+                    fresco:placeholderImageScaleType="center"
+                    android:background="#FFEBEF"
+                    />
+
+                <com.huapu.huafen.views.TagsContainer
+                    android:id="@+id/tagsContainer"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <FrameLayout
+                    android:id="@+id/editCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cover_shadow"
+                        android:layout_gravity="bottom"
+                        />
+                    <TextView
+                        android:layout_width="63dp"
+                        android:layout_height="25dp"
+                        style="@style/smallTextWhite"
+                        android:text="编辑封面"
+                        android:gravity="center"
+                        android:background="@drawable/text_white_white_rect_bg"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="@dimen/item_margin"
+                        android:layout_marginRight="@dimen/item_margin"
+                        />
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="40dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+                <EditText
+                    android:background="@null"
+                    android:id="@+id/etInputTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入花语标题"
+                    android:textColorHint="@color/text_black_enable"
+                    style="@style/bigText"
+                    android:textStyle="bold"
+                    android:maxLength="36"
+                    />
+                <TextView
+                    android:id="@+id/tvInputCount"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    tools:text="可输入36字"
+                    style="@style/smallTextGray"
+                    />
+
+                <View
+                    android:layout_marginTop="5dp"
+                    style="@style/divider_line_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tvPickClassification"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="63dp"
+                    android:layout_height="25dp"
+                    android:text="选择分类"
+                    android:gravity="center"
+                    android:background="@drawable/text_white_pink_rect_bg"
+                    android:padding="5dp"
+                    style="@style/smallTextPink"
+                    />
+
+                <com.huapu.huafen.views.ShareArticleLayout
+                    android:id="@+id/shareArticleLayout"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:padding="12dp"
+                    android:background="@drawable/aritlce_cover_tip_bg"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="提示：\n1.一个好的花语封面会给你带来更多阅读哦。\n2.设置好标题后，可以选择分类来决定自己的作品类型哦。"
+                    style="@style/normalTextGray"
+                    android:lineSpacingMultiplier="1.2"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    >
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <FrameLayout
+            android:id="@+id/flImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivProPic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                fresco:roundingBorderWidth="0.5dp"
+                fresco:roundingBorderColor="@color/base_tab_bar_divider"
+                />
+            <ImageView
+                android:id="@+id/ivPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/release_play"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_toRightOf="@id/flImage"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/normalText"
+                tools:text="小孩推车 | 带音乐的"
+                />
+
+            <com.huapu.huafen.views.CommonPriceTagView
+                android:layout_marginTop="20dp"
+                android:id="@+id/cptv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/class_line"
+        android:visibility="visible"
+        android:layout_below="@+id/rlContainer"
+        style="@style/divider_line_horizontal"/>
+</RelativeLayout>

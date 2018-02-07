@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/normalTextGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="订单详情" />
+
+        <View style="@style/divider_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivReportGoods"
+                style="@style/styleAvatarBig"
+                android:layout_marginBottom="@dimen/item_margin"
+                android:layout_marginLeft="@dimen/side"
+                android:layout_marginTop="@dimen/item_margin"
+                fresco:actualImageScaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvGoodsName"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/image_to_text"
+                android:layout_marginTop="@dimen/item_margin"
+                android:layout_toRightOf="@id/ivReportGoods"
+                tools:text="11111" />
+
+            <View
+                android:id="@+id/goodsDivider"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/base_divider_height"
+                android:layout_below="@id/ivReportGoods"
+                android:background="@color/base_tab_bar_divider" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/styleLayoutPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutOrderNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="订单编号" />
+
+            <TextView
+                android:id="@+id/tvOrderNum"
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                tools:text="15654144000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutOrderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_to_text">
+
+            <TextView
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="下单时间" />
+
+            <TextView
+                android:id="@+id/tvOrderCreateTime"
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                tools:text="2017-04-10" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutPayMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_to_text">
+
+            <TextView
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="支付方式" />
+
+            <TextView
+                android:id="@+id/tvPayType"
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                tools:text="支付宝" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutPayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_to_text">
+
+            <TextView
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="支付时间" />
+
+            <TextView
+                android:id="@+id/tvPayTime"
+                style="@style/normalTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                tools:text="2017-1-1" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/divider_line_horizontal" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/normalTextGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="详细描述" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:background="@color/base_tab_bar_divider" />
+
+        <RelativeLayout
+            style="@style/styleLayoutPadding"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <EditText
+                android:id="@+id/etArbitration"
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="请简要描述您的问题"
+                android:textColorHint="@color/text_black_enable" />
+
+            <TextView
+                android:id="@+id/tvInputCount"
+                style="@style/normalTextBlackEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/divider_line_horizontal" />
+
+    <TextView
+        style="@style/normalTextGray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin"
+        android:layout_marginLeft="@dimen/side"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="电话（方便客服可尽快联系到您，必填）" />
+
+    <View style="@style/divider_line_horizontal" />
+
+    <EditText
+        android:id="@+id/etPhoneNum"
+        style="@style/normalTextGray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="联系电话："
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingBottom="@dimen/item_margin"
+        android:paddingLeft="@dimen/side"
+        android:paddingTop="@dimen/item_margin"
+        android:singleLine="true"
+        android:textColorHint="@color/text_black_enable" />
+
+    <View style="@style/divider_line_horizontal" />
+
+    <TextView
+        style="@style/normalTextGray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin"
+        android:layout_marginLeft="@dimen/side"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="图片（如聊天记录截图，选填）" />
+
+    <View style="@style/divider_line_horizontal" />
+
+</LinearLayout>

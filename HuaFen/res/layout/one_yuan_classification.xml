@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llSort"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/item_margin"
+    >
+
+
+    <RadioGroup
+        android:id="@+id/rgClassification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/rbAll"
+            style="@style/one_yuan_all"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/rbLady"
+            style="@style/one_yuan_lady"
+            />
+        <RadioButton
+            android:id="@+id/rbBaby"
+            style="@style/one_yuan_baby"
+            />
+        <RadioButton
+            android:id="@+id/rbHome"
+            style="@style/one_yuan_home"
+            />
+    </RadioGroup>
+    <View
+        style="@style/divider_line_horizontal"
+        />
+    <include
+        layout="@layout/sort"
+        android:background="@color/base_bg"
+        />
+</LinearLayout>

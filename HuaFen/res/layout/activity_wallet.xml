@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+    <com.huapu.huafen.views.PullToRefreshRecyclerView
+        android:id="@+id/ptrRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccffffff"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:background="@color/divider_black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/tvBtnLeft"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="赚到、节省怎么算"
+                style="@style/normalText"/>
+            <View
+                android:layout_width="@dimen/base_divider_height"
+                android:layout_height="match_parent"
+                android:background="@color/divider_black"/>
+            <TextView
+                android:id="@+id/tvBtnRight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="钱款去哪了？"
+                style="@style/normalText" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.huapu.huafen.views.HLoadingStateView
+        android:id="@+id/loadingStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</FrameLayout>

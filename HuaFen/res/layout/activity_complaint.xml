@@ -1,0 +1,351 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    
+    <include
+        android:id="@+id/layout_title_bar"
+        layout="@layout/base_title_bar" />
+
+    <!-- <RelativeLayout
+        android:id="@+id/layoutBase"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_title_height"
+        android:background="@color/base_title_bar_bg" >
+
+        <Button
+            android:id="@+id/btnTitleLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_title_left_states" />
+
+        <TextView
+            android:id="@+id/tvTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_title_bar_34" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right"
+            android:text="@string/complaint_submint"
+            android:textColor="#ff9bb0"
+            android:textSize="@dimen/ts_title_bar_34"
+            android:background="@null" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_black" /> -->
+
+<RelativeLayout 
+    android:id="@+id/rlLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/layout_title_bar"
+    android:background="@color/toast_bg"
+    >
+    <TextView
+        android:id="@+id/tvLayout" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/complaint_layout"
+        
+        android:layout_marginTop="@dimen/complaint_margin_top"
+        android:layout_marginBottom="@dimen/complaint_margin_bottom"
+        android:layout_marginLeft="@dimen/complaint_margin_left"
+        style="@style/normalTextGray"
+        />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:layout_below="@id/tvLayout"
+        android:background="@color/divider_black" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/complaintFraud"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_bar_height"
+        android:layout_below="@id/rlLayout"
+        android:background="@color/white"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complaint_fraud"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/complaint_margin_left"
+            style="@style/normalText"
+            />
+        <Button
+            android:id="@+id/btnCheckedFraud"
+            android:layout_width="@dimen/complaint_checked"
+            android:layout_height="@dimen/complaint_checked"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_pay"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/complaint_checked_margin_right"  
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+        <View
+        android:id="@+id/frauDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/divider_margin_left"
+        android:layout_marginRight="@dimen/divider_margin_right"
+        android:background="@color/divider_black" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/complaintSpread"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_bar_height"
+        android:layout_below="@id/complaintFraud"
+        android:background="@color/white"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complaint_spread"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/complaint_margin_left"
+            style="@style/normalText"
+            />
+        <Button
+            android:id="@+id/btnCheckedSpread"
+            android:layout_width="@dimen/complaint_checked"
+            android:layout_height="@dimen/complaint_checked"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_pay"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/complaint_checked_margin_right"            
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+        <View
+	        android:id="@+id/spreadDivider"
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/base_divider_height"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginLeft="@dimen/divider_margin_left"
+	        android:layout_marginRight="@dimen/divider_margin_right"
+	        android:background="@color/divider_black" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/complaintUntruth"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_bar_height"
+        android:layout_below="@id/complaintSpread"
+        android:background="@color/white"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complaint_untruth"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/complaint_margin_left"
+            style="@style/normalText"
+            />
+        <Button
+            android:id="@+id/btnCheckedUntruth"
+            android:layout_width="@dimen/complaint_checked"
+            android:layout_height="@dimen/complaint_checked"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_pay"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/complaint_checked_margin_right"            
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+        <View
+        android:id="@+id/untruthDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/divider_margin_left"
+        android:layout_marginRight="@dimen/divider_margin_right"
+        android:background="@color/divider_black" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/complaintInfest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_bar_height"
+        android:layout_below="@id/complaintUntruth"
+        android:background="@color/white"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complaint_infest"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/complaint_margin_left"
+            style="@style/normalText"
+            />
+        <Button
+            android:id="@+id/btnCheckedInfest"
+            android:layout_width="@dimen/complaint_checked"
+            android:layout_height="@dimen/complaint_checked"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_pay"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/complaint_checked_margin_right"            
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+        <View
+        android:id="@+id/infestDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/divider_margin_left"
+        android:layout_marginRight="@dimen/divider_margin_right"
+        android:background="@color/divider_black" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/complaintInsult"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_bar_height"
+        android:layout_below="@id/complaintInfest"
+        android:background="@color/white"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complaint_insult"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/complaint_margin_left"
+            style="@style/normalText"
+            />
+        <Button
+            android:id="@+id/btnCheckedInsult"
+            android:layout_width="@dimen/complaint_checked"
+            android:layout_height="@dimen/complaint_checked"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_pay"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/complaint_checked_margin_right"            
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+        <View
+	        android:id="@+id/insultDivider"
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/base_divider_height"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginLeft="@dimen/divider_margin_left"
+	        android:layout_marginRight="@dimen/divider_margin_right"
+	        android:background="@color/divider_black" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rlDescribe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/complaint_describe_height"
+        android:layout_below="@id/complaintInsult"
+        android:background="@color/white"
+        >
+        <EditText
+            android:id="@+id/etTopWord" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/normalTextGray"
+            android:hint="@string/complaint_describe"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginLeft="@dimen/complaint_margin_left"
+            android:layout_marginRight="@dimen/divider_margin_right"
+            android:gravity="top|left"
+            android:includeFontPadding="false"
+            android:background="@null"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/etTopWord"
+            android:layout_marginRight="@dimen/divider_margin_right"
+             >
+
+            <TextView 
+            android:id="@+id/tvLeftWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            style="@style/normalTextGray"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            />
+        <TextView 
+            android:id="@+id/tvCenterWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            style="@style/normalTextGray"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/tvLeftWord"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            />
+        <TextView 
+            android:id="@+id/tvRightWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200"
+            style="@style/normalTextGray"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/tvCenterWord"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            />
+        </RelativeLayout>
+        <View
+	        android:id="@+id/describeDivider"
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/base_divider_height"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginLeft="@dimen/divider_margin_left"
+	        android:layout_marginRight="@dimen/divider_margin_right"
+	        android:background="@color/divider_black" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/rlBottom"
+        android:layout_width="@dimen/complaint_bottom_width"
+        android:layout_height="@dimen/complaint_bottom_height"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@color/base_bg"
+        android:layout_below="@+id/rlDescribe"
+        android:layout_marginLeft="@dimen/complaint_margin_left"
+        >
+        <ImageView 
+            android:id="@+id/ivPhoto"
+            android:layout_width="@dimen/complaint_photo_width"
+            android:layout_height="@dimen/complaint_photo_height"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_launcher"
+            />
+    </RelativeLayout>
+    
+</RelativeLayout>

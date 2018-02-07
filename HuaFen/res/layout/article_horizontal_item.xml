@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/article"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundedCornerRadius="4dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_bg_gray_border_round_shape_clock"
+        />
+
+    <ImageView
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/articleFlag"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/aritcle"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/styleLayoutItem"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:id="@+id/tvArticleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/normalTextWhite"
+            tools:text="水果沙拉小技巧，希望大家啊实打实大声打啊打死啦六氟化硫收到货发了就好"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/tvLikeCount"
+            android:layout_below="@id/tvArticleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/smallTextWhite"
+            tools:text="123"
+            android:drawableLeft="@drawable/finger"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:layout_toRightOf="@id/tvLikeCount"
+            android:id="@+id/tvCollection"
+            android:layout_below="@id/tvArticleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/smallTextWhite"
+            tools:text="232"
+            android:drawableLeft="@drawable/shop_huayu_collection"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tvWatch"
+            android:layout_below="@id/tvArticleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvCollection"
+            android:layout_marginTop="10dp"
+            style="@style/smallTextWhite"
+            tools:text="1234"
+            android:drawableLeft="@drawable/shop_eye"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

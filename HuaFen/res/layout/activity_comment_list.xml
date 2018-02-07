@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llCommentTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.huapu.huafen.views.BGAFlowLayout
+            android:id="@+id/mFlowCommentTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:background="@color/base_tab_bar_divider" />
+    </LinearLayout>
+
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/buyerListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/dealedListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible" />
+
+</LinearLayout>

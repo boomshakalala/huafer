@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <com.huapu.huafen.looper.IndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom" />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/personLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/styleLayoutItem"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageView"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_toRightOf="@id/imageView"
+            android:text="name"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/item_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_toRightOf="@id/imageView">
+
+            <com.huapu.huafen.views.CommonTitleView
+                android:id="@+id/ctvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/dateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ctvName"
+                style="@style/smallTextGray"
+                android:textSize="10sp"
+                tools:text="2017-12" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/viewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ctvName"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/dateView"
+                android:drawableLeft="@drawable/page_visit"
+                android:gravity="center_vertical"
+                android:drawablePadding="3dp"
+                style="@style/smallTextGray"
+                android:textSize="10sp"
+                tools:text="268" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/leaveMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ctvName"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/viewText"
+                android:drawableLeft="@drawable/comment_count_icon"
+                android:drawablePadding="3dp"
+                style="@style/smallTextGray"
+                android:textSize="10sp"
+                tools:text="11" />
+        </RelativeLayout>
+
+
+        <com.huapu.huafen.views.FollowImageView
+            android:id="@+id/addAttention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            tools:src="@drawable/btn_follow_gray_pressed" />
+
+        <View
+            android:layout_below="@id/imageView"
+            android:layout_marginTop="10dp"
+            android:id="@+id/line5"
+            style="@style/divider_line_horizontal"/>
+    </RelativeLayout>
+
+</LinearLayout>

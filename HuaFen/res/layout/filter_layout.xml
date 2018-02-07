@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="选择标签"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/tags"
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            android:weightSum="4">
+
+            <CheckBox
+                android:id="@+id/chbNew"
+                style="@style/style_filter_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="全新" />
+
+            <CheckBox
+                android:id="@+id/chbVIP"
+                style="@style/style_filter_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="VIP" />
+
+            <CheckBox
+                android:id="@+id/chbStar"
+                style="@style/style_filter_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="明星" />
+
+            <CheckBox
+                android:id="@+id/chbPostage"
+                style="@style/style_filter_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="包邮" />
+
+            <CheckBox
+                android:id="@+id/space0"
+                style="@style/style_filter_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="VIP"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/space1"
+                style="@style/style_filter_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="明星"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/llFitAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="适合年龄" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle2"
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/side"
+            android:text="价格区间" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/styleLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side"
+        >
+
+
+        <EditText
+            android:id="@+id/etPriceLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_price_corner"
+            android:gravity="center"
+            android:hint="商品最低价"
+            android:inputType="number"
+            android:maxLength="7"
+            android:padding="5dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/base_btn_normal"
+            android:textSize="@dimen/ts_small_24" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/text_color_gray"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/etPriceHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_price_corner"
+            android:gravity="center"
+            android:hint="商品最高价"
+            android:inputType="number"
+            android:maxLength="7"
+            android:padding="5dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/base_btn_normal"
+            android:textSize="@dimen/ts_small_24" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/base_tab_bar_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_bottom_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvBtnClean"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_des_28" />
+
+        <TextView
+            android:id="@+id/tvBtnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/base_pink"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_title_32" />
+    </LinearLayout>
+
+
+</LinearLayout>

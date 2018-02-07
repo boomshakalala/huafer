@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/oneImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_pic"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:viewAspectRatio="1.0" />
+
+        <TextView
+            android:id="@+id/tvPrice1"
+            style="@style/smallTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_region"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:gravity="center_vertical"
+            tools:text="111" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/twoImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_pic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:viewAspectRatio="1.0" />
+
+                <TextView
+                    android:id="@+id/tvPrice2"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_region"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:gravity="center_vertical"
+                    tools:text="111" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/threeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_pic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:viewAspectRatio="1.0" />
+
+                <TextView
+                    android:id="@+id/tvPrice3"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_region"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:gravity="center_vertical"
+                    tools:text="111" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/fourImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_pic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:viewAspectRatio="1.0" />
+
+                <TextView
+                    android:id="@+id/tvPrice4"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_region"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:gravity="center_vertical"
+                    tools:text="111" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/fiveImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_pic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:viewAspectRatio="1.0" />
+
+                <TextView
+                    android:id="@+id/tvPrice5"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_region"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:gravity="center_vertical"
+                    tools:text="111" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

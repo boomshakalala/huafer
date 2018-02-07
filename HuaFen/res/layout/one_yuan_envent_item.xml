@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/styleLayoutItem"
+    android:background="#7ac6c3">
+
+    <TextView
+        android:id="@+id/tvEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/normalTextWhite"
+        tools:text="2017年第17期"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/yiyuan_down_arrow"
+        />
+
+</LinearLayout>

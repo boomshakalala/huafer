@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivHeader"
+        style="@style/styleAvatarBig"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:padding="3dp"
+        fresco:placeholderImage="@drawable/default_pic"
+        fresco:roundAsCircle="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_tip_small" />
+
+            <TextView
+                android:id="@+id/tvNameRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="昵称重复"
+                android:textColor="@color/base_pink" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/normalTextGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="名字确定后不能重复，更方便朋友找到你" />
+
+    <TextView
+        android:id="@+id/tvBtnBegin"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/text_pink_round_bg"
+        android:gravity="center"
+        android:text="开始逛"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ts_title_32" />
+
+</LinearLayout>

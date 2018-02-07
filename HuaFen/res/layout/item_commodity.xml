@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentListView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivHeader"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/default_head"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/base_tab_bar_divider"
+                fresco:roundingBorderWidth="0.5dp" />
+
+            <com.huapu.huafen.views.UserView
+                android:id="@+id/userView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <com.huapu.huafen.views.HRecyclerView
+            android:id="@+id/rvHorizontalPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none" />
+
+        <com.huapu.huafen.views.CommonPriceTagView
+            android:id="@+id/cptv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp" />
+
+
+        <com.huapu.huafen.views.DashLineView
+            android:id="@+id/dlvGoodsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            app:dashLineStyle="normalBlack" />
+
+        <TextView
+            android:id="@+id/tvDes"
+            style="@style/smallTextGray"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/divider_black" />
+
+        <RelativeLayout
+            android:id="@+id/layoutToyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical">
+
+            <com.huapu.huafen.views.DashLineView
+                android:id="@+id/dlvCity"
+                style="@style/dash_line_view_location_bg_new" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/btn_item_like_states" />
+
+                    <TextView
+                        android:id="@+id/tvLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="1"
+                        android:textColor="@drawable/text_gray_states"
+                        android:textSize="@dimen/ts_20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutVoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivVoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/leave_message" />
+
+                    <TextView
+                        android:id="@+id/tvVoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:textColor="@drawable/text_gray_states"
+                        android:textSize="@dimen/ts_20" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/base_bg" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivSelled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/icon_selled"
+        android:visibility="gone" />
+</RelativeLayout>

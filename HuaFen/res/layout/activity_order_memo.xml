@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_height="100dp">
+
+        <EditText
+            android:id="@+id/etMemo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="top"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="请输入需要备注的事情"
+            android:maxLength="100"
+            android:textColorHint="@color/divider_black"
+            style="@style/normalText" />
+
+        <TextView
+            android:id="@+id/tvInputCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="0/100"
+            style="@style/smallTextGray"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/divider_black"/>
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="订单发货前可以修改备注\n建议填写和卖家协商后的信息\n备注不作为仲裁直接证据"
+        style="@style/smallTextGray"
+        />
+
+</LinearLayout>

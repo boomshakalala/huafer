@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BGAFlowLayout">
+        <!-- 标签之间的水平间距 -->
+        <attr name="fl_horizontalChildGap" format="dimension" />
+        <!-- 标签之间的垂直间距 -->
+        <attr name="fl_verticalChildGap" format="dimension" />
+        <!-- 是否平均分配每一行的剩余水平方向的空白区域给该行的标签 -->
+        <attr name="fl_isDistributionWhiteSpacing" format="boolean" />
+    </declare-styleable>
+    <!-- 水平滚动的viewpager的一些属性定义 -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsIndicatorPadding" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsTabTextColor" format="color" />
+        <attr name="pstsTabTextSize" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DashLineView">
+        <attr name="drawableStart" format="reference" />
+        <attr name="dashLineStyle">
+            <enum name="smallGray" value="0" />
+            <enum name="smallBlack" value="1" />
+            <enum name="normalGray" value="2" />
+            <enum name="normalBlack" value="3" />
+            <enum name="bigGray" value="4" />
+            <enum name="bigBlack" value="5" />
+            <enum name="hugeGray" value="6" />
+            <enum name="hugeBlack" value="7" />
+            <enum name="bigHugeGray" value="8" />
+            <enum name="bigHugeBlack" value="9" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="TitleBarNew">
+        <attr name="titleBarText" format="string" />
+        <attr name="leftText" format="string" />
+        <attr name="rightText" format="string" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="SelectedControl">
+        <!-- Defines segmented control buttons text. -->
+        <attr name="SelectedNames" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FilterSelectView">
+        <attr name="selections" format="reference" />
+
+
+    </declare-styleable>
+    <declare-styleable name="SelectableRoundedImageView">
+        <attr name="sriv_left_top_corner_radius" format="dimension" />
+        <attr name="sriv_right_top_corner_radius" format="dimension" />
+        <attr name="sriv_left_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_right_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_border_width" format="dimension" />
+        <attr name="sriv_border_color" format="color" />
+        <attr name="sriv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+
+    <declare-styleable name="PullToZoomView">
+        <attr name="headerView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="zoomView" format="reference" />
+        <attr name="isHeaderParallax" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonTitleView">
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"></attr>
+        <attr name="max_select" format="integer"></attr>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingAvatarToolbar">
+        <attr name="collapsedPadding" format="dimension" />
+        <attr name="expandedPadding" format="dimension" />
+
+        <attr name="collapsedImageSize" format="dimension" />
+        <attr name="expandedImageSize" format="dimension" />
+
+        <attr name="collapsedTextSize" format="dimension" />
+        <attr name="expandedTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ClipSquareImageView">
+        <attr name="ClipSquareIV_BorderDistance" format="dimension" />
+        <attr name="ClipSquareIV_BorderWidth" format="dimension" />
+        <attr name="ClipSquareIV_BorderColor" format="color" />
+        <attr name="ClipSquareIV_OutsideColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="vericationCodeInput">
+        <attr name="box" format="integer" />
+        <attr name="child_h_padding" format="dimension" />
+        <attr name="child_v_padding" format="dimension" />
+        <attr name="child_width" format="dimension" />
+        <attr name="child_height" format="dimension" />
+        <attr name="padding" format="dimension" />
+        <attr name="box_bg_focus" format="reference" />
+        <attr name="box_bg_normal" format="reference" />
+        <attr name="inputType" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="empty_view">
+        <attr name="empty_iv" format="reference" />
+        <attr name="empty_tv" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="common_attrs">
+        <attr name="size_model" format="integer" />
+        <attr name="text_color" format="string" />
+        <attr name="name" format="string" />
+        <attr name="value" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="valueColor" format="color|integer" />
+        <attr name="keyColor" format="color|integer" />
+        <attr name="imeOptions">
+            <enum name="next" value="0" />
+            <enum name="done" value="1" />
+        </attr>
+        <attr name="imageRatioOfWidth" format="float"/>
+        <attr name="imageRatioOfHeight" format="float"/>
+        <attr name="ratioOfWidth" format="float"/>
+        <attr name="ratioOfHeight" format="float"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/base_bg"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/etTopWord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="请输入描述"
+            android:textColorHint="@color/text_black_enable"
+            android:maxLength="200"
+            style="@style/normalTextGray" />
+
+        <TextView
+            android:id="@+id/tvInputCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="0/200"
+            style="@style/normalTextBlackEnable" />
+    </RelativeLayout>
+    <View
+        style="@style/divider_line_horizontal"
+        />
+    <com.huapu.huafen.views.MyGridView
+        android:id="@+id/gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_below="@id/layoutInput"
+        android:horizontalSpacing="@dimen/image_to_image"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:verticalSpacing="@dimen/image_to_image" />
+
+</LinearLayout>

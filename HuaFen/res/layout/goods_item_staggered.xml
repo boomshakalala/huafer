@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_bg_gray_border_round_shape"
+    android:padding="0.5dp">
+
+    <FrameLayout
+        android:id="@+id/flGoods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/goodsPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp"
+            fresco:viewAspectRatio="1.0" />
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/video_play_small"
+            android:visibility="gone"
+            tools:visibility="visible" />
+        <FrameLayout
+            android:id="@+id/flAuctionIcon"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:background="#80AEA9D7"
+            android:layout_height="17dp">
+            <TextView
+                android:id="@+id/tvAuction"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="拍卖"
+                style="@style/smallTextWhite"
+                android:drawableLeft="@drawable/auction_icon_small"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                />
+
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/sellout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oneyuan_item_sellout_bg"
+            android:gravity="center"
+            android:padding="41dp"
+            android:src="@drawable/list_sellout"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tvBrandAndName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/normalText"
+            android:layout_toRightOf="@id/flGoods"
+            android:layout_alignTop="@id/flGoods"
+            tools:text="BOTTEGA VENETA | 短款钱包"
+            android:singleLine="true"
+            />
+
+        <com.huapu.huafen.views.CommonPriceTagView
+            android:id="@+id/cptv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_to_text" />
+
+        <TextView
+            android:id="@+id/tvSellPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/normalTextPink"
+            android:visibility="visible"
+            tools:text="1111"
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                >
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/avatar"
+                    style="@style/styleAvatarSmall"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_pic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundingBorderWidth="0.5dp"
+                    fresco:roundingBorderColor="@color/divider_black"
+                    fresco:roundAsCircle="true"
+                    android:layout_gravity="center_vertical"
+                    />
+                <com.huapu.huafen.views.UserView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/userView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:drawableLeft="@drawable/btn_item_like_states"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                tools:text="1111"
+                style="@style/smallTextGray"
+                android:singleLine="true"
+                android:drawablePadding="5dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

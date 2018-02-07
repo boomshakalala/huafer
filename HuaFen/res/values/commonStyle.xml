@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--边距-->
+    <style name="styleLayoutPadding">
+        <item name="android:padding">@dimen/side</item>
+    </style>
+
+    <style name="styleLayoutMargin">
+        <item name="android:layout_margin">@dimen/side</item>
+    </style>
+
+    <style name="styleLayoutItem">
+        <item name="android:paddingLeft">@dimen/side</item>
+        <item name="android:paddingRight">@dimen/side</item>
+        <item name="android:paddingTop">@dimen/item_margin</item>
+        <item name="android:paddingBottom">@dimen/item_margin</item>
+    </style>
+
+    <style name="styleLayoutItem2">
+        <item name="android:paddingLeft">@dimen/item_margin</item>
+        <item name="android:paddingRight">@dimen/item_margin</item>
+        <item name="android:paddingTop">@dimen/item_margin</item>
+        <item name="android:paddingBottom">@dimen/item_margin</item>
+    </style>
+
+    <!--头像-->
+    <style name="styleAvatarSmall">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+
+    <style name="styleAvatarNormal">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+    <style name="styleAvatarBig">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <!--商品列表图片-->
+    <style name="styleCommodity">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <!--商品图片小-->
+    <style name="styleCommoditySmall">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <!--首页tab-->
+    <style name="styleMainTabImg">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+</resources>

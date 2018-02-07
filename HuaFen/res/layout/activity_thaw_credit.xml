@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3" >
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title_bar"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/side"
+                android:text="可提取金额"
+                style="@style/normalText" />
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="1000元"
+                style="@style/normalText" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:background="@color/base_tab_bar_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="微信账户"
+                android:textSize="@dimen/ts_des_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/ts_des_28" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlWords"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@id/llContent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginRight="@dimen/side"
+            android:text="完成短信验证将解冻信用金，解冻后 您将失去信用金认证金额将返回到您的微信钱包里"
+            style="@style/normalTextGray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llNumber"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@+id/rlWords"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/side"
+                android:text="原号码"
+                android:textSize="@dimen/ts_des_28" />
+
+            <TextView
+                android:id="@+id/tvPhoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:textSize="@dimen/ts_des_28" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:background="@color/base_tab_bar_divider" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:paddingRight="10dp">
+
+            <EditText
+                android:layout_marginLeft="@dimen/side"
+                android:id="@+id/etVerificationCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:inputType="numberSigned"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnGetVerificationcode"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/customer_photo_margin_top"
+                android:background="@drawable/identifying"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:visibility="visible"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/llNumber"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:text="收不到验证码？"
+        android:textColor="@color/text_color_gray"
+        android:textSize="@dimen/ts_small_24" />
+
+        <TextView
+            android:id="@+id/tvBtnThawCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTip"
+            android:layout_marginTop="46dp"
+            android:layout_toLeftOf="@+id/tvTip"
+            android:background="@drawable/text_pink_round_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="解冻信用金"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/ts_des_28" />
+
+</RelativeLayout>

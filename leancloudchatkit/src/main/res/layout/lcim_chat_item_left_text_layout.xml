@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_left_text_tv_content"
+    style="@style/huafenLeftText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/huafen_chat_item_left_bg"
+    android:gravity="center_vertical|left"
+    android:maxWidth="210dp"
+    android:textColor="@android:color/black"
+    />

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/layoutTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:id="@+id/tvIsFreeDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:background="@drawable/text_free_delivery_bg"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="包邮"
+            android:layout_marginRight="3dp"
+            style="@style/smallTextWhite" />
+        <TextView
+            android:id="@+id/tvIsNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_new_bg"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="全新"
+            android:layout_marginRight="3dp"
+            style="@style/smallTextWhite" />
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_discount_bg"
+            android:layout_gravity="bottom"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:gravity="center_vertical"
+            tools:text="1折"
+            style="@style/smallTextPink"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

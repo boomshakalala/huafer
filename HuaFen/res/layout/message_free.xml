@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/normalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/item_margin"
+                    android:paddingLeft="@dimen/side"
+                    android:paddingRight="@dimen/side"
+                    android:paddingTop="@dimen/item_margin"
+                    android:text="消息免打扰" />
+
+                <RadioGroup
+                    android:id="@+id/rgDisturb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:checkedButton="@+id/rbDisturbNone"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbDisturbAll"
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/leave_msg_rb_selector"
+                        android:paddingBottom="@dimen/space_block"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:paddingTop="@dimen/space_block"
+                        android:text="开启" />
+
+                    <View
+                        style="@style/divider_line_horizontal"
+                        android:layout_marginLeft="@dimen/side" />
+
+                    <RadioButton
+                        android:id="@+id/rbDisturbNight"
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/leave_msg_rb_selector"
+                        android:paddingBottom="@dimen/space_block"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:paddingTop="@dimen/space_block"
+                        android:text="只在夜间开启" />
+
+                    <View
+                        style="@style/divider_line_horizontal"
+                        android:layout_marginLeft="@dimen/side" />
+
+                    <RadioButton
+                        android:id="@+id/rbDisturbNone"
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/leave_msg_rb_selector"
+                        android:paddingBottom="@dimen/space_block"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:paddingTop="@dimen/space_block"
+                        android:text="关闭" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                style="@style/smallTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/side"
+                android:paddingRight="@dimen/side"
+                android:paddingTop="5dp"
+                android:text="开启后，收到所有消息都不会提醒，如果设置为“只在夜间开启”，则只在22:00到8:00间生效" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_layout_states"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="订单提醒"
+                        android:textSize="@dimen/ts_des_28" />
+
+                    <com.huapu.huafen.views.SlideSwitch
+                        android:id="@+id/checkBoxOrderDisturb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/base_tab_bar_divider" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="活动提醒"
+                        android:textSize="@dimen/ts_des_28" />
+
+                    <com.huapu.huafen.views.SlideSwitch
+                        android:id="@+id/ss_campaign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/base_tab_bar_divider" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="通知提醒"
+                        android:textSize="@dimen/ts_des_28" />
+
+                    <com.huapu.huafen.views.SlideSwitch
+                        android:id="@+id/ss_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/base_tab_bar_divider" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="私信提醒"
+                        android:textSize="@dimen/ts_des_28" />
+
+                    <com.huapu.huafen.views.SlideSwitch
+                        android:id="@+id/sx_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/base_tab_bar_divider" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="留言提醒"
+                        android:textSize="@dimen/ts_des_28" />
+
+                    <com.huapu.huafen.views.SlideSwitch
+                        android:id="@+id/checkBoxCommentDisturb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:checked="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/smallTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/side"
+                android:paddingTop="5dp"
+                android:text="关闭后将不会收到对应提醒" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:background="@color/base_tab_bar_divider"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layoutBuy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="@dimen/mine_padding_top"
+                    android:paddingTop="@dimen/mine_padding_top"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:text="给我一个好评吧"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/ts_des_28" />
+
+                    <ImageView
+                        android:id="@+id/ivRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_right"
+                        android:background="@drawable/right_enter" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:background="@color/base_tab_bar_divider"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

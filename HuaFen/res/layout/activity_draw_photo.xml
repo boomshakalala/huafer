@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/draw_photo_view_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="7"
+        android:background="#1d1d1d"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/draw_photo_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/base_tab_bar_divider" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/draw_photo_cancel"
+            style="@style/deal_image_bottom_textview_style"
+            android:text="撤销"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/draw_ok_text"
+            style="@style/deal_image_bottom_textview_style"
+            android:text="保存"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

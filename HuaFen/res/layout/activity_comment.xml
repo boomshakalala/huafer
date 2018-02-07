@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:checkedButton="@+id/rbAll"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="8dp">
+
+        <RadioButton
+            android:id="@id/rbAll"
+            style="@style/comment_radio_all1"
+            android:text="全部" />
+
+        <RadioButton
+            android:id="@+id/rbSatisfaction"
+            style="@style/comment_radio_satisfaction1"
+            android:text="好评" />
+
+        <RadioButton
+            android:id="@+id/rbGeneral"
+            style="@style/comment_radio_general1"
+            android:text="中评" />
+
+        <RadioButton
+            android:id="@+id/rbDissatisfied"
+            style="@style/comment_radio_dissatisfaction1"
+            android:text="差评" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:background="@color/base_tab_bar_divider" />
+
+
+    <com.huapu.huafen.views.HViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

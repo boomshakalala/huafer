@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_bg_gray_border_round_shape"
+    android:padding="0.5dp"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/articleImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="3dp"
+            fresco:viewAspectRatio="1.41" />
+        <ImageView
+            android:id="@+id/articleIcon"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="top|right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aritcle"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/tvArticleTitle"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        style="@style/normalText"
+        tools:text="花语标题"
+        />
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/smallTextGray"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="按时大大大饭店开始开放时间的房价实际房价数据分类三家分晋说多了都是泪双氯芬酸净空法师放假了时间了开发实力开发思考逻辑来看"
+        />
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            >
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatar"
+                style="@style/styleAvatarSmall"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/default_pic"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundingBorderWidth="0.5dp"
+                fresco:roundingBorderColor="@color/divider_black"
+                fresco:roundAsCircle="true"
+                android:layout_gravity="center_vertical"
+                />
+            <com.huapu.huafen.views.UserView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/userView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvLikeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:drawableLeft="@drawable/btn_item_like_states"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            tools:text="1111"
+            style="@style/smallTextGray"
+            android:singleLine="true"
+            android:drawablePadding="5dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

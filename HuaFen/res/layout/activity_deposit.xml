@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.DepositActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base_bg"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fresco:placeholderImage="@drawable/deposit_bg"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:viewAspectRatio="1.75"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/deposit_icon" />
+
+                    <TextView
+                        android:id="@+id/moneyPay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="21sp"
+                        tools:text="¥10" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="参与拍卖的买家需提前交纳保证金\n未拍得拍品的买家，平台将返还其保证金\n竞拍成功的用户需在72小时内完成支付\n如未完成支付保证金将赔付给卖家"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:background="@color/base_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/side"
+                android:paddingRight="@dimen/side"
+                android:text="为保证竞拍成功后拍品顺利送达，请确认您的收货地址"
+                android:textColor="@color/text_color_gray"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                style="@style/styleLayoutItem"
+                android:background="@color/white"
+                >
+                <LinearLayout
+                    android:id="@+id/addressLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/normalText"
+                            android:text="收货人："
+                            />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/personName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                style="@style/normalText"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                tools:text="阿斯达大大大大大大大奥奥奥奥奥奥奥奥奥奥奥奥奥ajjkadjkajdajdjkadjkahjkdahjkdahjkdhjakdhjkadhjkashjkdsajk"
+                                />
+                            <TextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/tvPhoneNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/normalText"
+                                tools:text="17710123277"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/personName"
+                            android:text="地址：" />
+                        <TextView
+                            android:id="@+id/personAddress"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            style="@style/normalText"
+                            tools:text="安静的哈好的哈多哈的金卡和加大进口的金卡的黄金卡接口大河健康的环境卡的黄金卡还记得哈结婚登记卡回家看到手机卡山东黄金卡手机卡手机卡山东黄金卡死 1"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="35dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_enter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/flower_space_ten"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/styleLayoutItem"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="支付方式"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/shape_four_corner"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_order_confirm_huafen" />
+
+                        <TextView
+                            android:id="@+id/ivShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="花粉儿担保交易"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/divider_black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+                    <LinearLayout
+                        android:id="@+id/llWeChat"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btnCheckedWeChat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/checkbox_pay"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/icon_order_confirm_we" />
+
+                        <TextView
+                            android:id="@+id/tvTitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="微信支付"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/ts_des_28" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/aliPayLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btnCheckedZFB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/checkbox_pay"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/icon_order_confirm_zfb" />
+
+                        <TextView
+                            android:id="@+id/tvTitle3"
+                            style="@style/normalText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/image_to_text"
+                            android:gravity="center"
+                            android:text="支付宝支付" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="竞拍需同意花粉儿拍卖竞拍协议"
+                    android:textColor="@color/text_color"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/lookUpDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="查看协议"
+                    android:textColor="#64d4ff"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:background="@color/base_bg" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/confirmDeposit"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/shape_send_corner"
+            android:gravity="center"
+            android:text="交纳保证金"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+
+</LinearLayout>
+

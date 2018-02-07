@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lvOrderRefund"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@color/base_bg"
+        android:dividerHeight="10dp"
+        android:layout_weight="1"
+        android:listSelector="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/layoutRefundBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_bottom_height"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvBtnLeft"
+            android:layout_width="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="申请退款"
+            android:background="@drawable/btn_stroke_black"
+            style="@style/normalText" />
+
+
+        <TextView
+            android:id="@+id/tvBtnMiddle"
+            android:layout_width="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_stroke_black"
+            android:text="延长收货"
+            style="@style/normalText" />
+
+        <TextView
+            android:id="@+id/tvBtnRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_stroke_pink"
+            android:gravity="center"
+            android:text="确认收货"
+            style="@style/normalTextPink" />
+    </LinearLayout>
+
+</LinearLayout>

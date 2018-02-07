@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-25dp"
+        android:scaleType="fitXY" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3333333" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="33dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="33dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCampaignTip"
+                style="@style/normalTextWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击发布活动商品" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/campaigns"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/flGoods"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvPublishGoods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="12dp"
+                    android:drawableTop="@drawable/goods_icon"
+                    android:gravity="center"
+                    android:text="商品"
+                    android:textColor="#45C6F8"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flOneYuan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvPublishOneYuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="12dp"
+                    android:drawableTop="@drawable/one_yuan_icon"
+                    android:gravity="center"
+                    android:text="一元商品"
+                    android:textColor="#FFBB72"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flArticle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvPublishArticle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="12dp"
+                    android:drawableTop="@drawable/article_icon"
+                    android:gravity="center"
+                    android:text="花语"
+                    android:textColor="#FF9BB0"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flDismiss"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/ivDismiss"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:src="@drawable/release_dismiss" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

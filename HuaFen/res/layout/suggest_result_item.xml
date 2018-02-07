@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvBrand"
+        android:paddingBottom="@dimen/item_margin"
+        android:paddingTop="@dimen/item_margin"
+        android:paddingLeft="@dimen/side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="班尼路"
+        style="@style/normalText"
+        android:background="@drawable/item_body_selector"/>
+    <View
+        android:layout_marginLeft="@dimen/side"
+        android:layout_marginRight="@dimen/side"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/base_tab_bar_divider"
+        />
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.huapu.huafen.views.TitleBarNew
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="45.5dp"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <LinearLayout
+                android:id="@+id/llFilters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.huapu.huafen.views.FilterSelectView
+                        android:id="@+id/filterSelectView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        app:selections="@array/filters" />
+
+                    <View
+                        style="@style/divider_line_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/chbOrderBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:button="@drawable/order_by_selector"
+                        android:paddingRight="10dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View style="@style/divider_line_horizontal" />
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.huapu.huafen.views.PtrDefaultFrameLayout
+                    android:id="@+id/ptrFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.huapu.huafen.views.PtrDefaultFrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFilterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:id="@+id/flContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.huapu.huafen.views.FilterRegionView
+                        android:id="@+id/filterRegionView"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <com.huapu.huafen.views.ClassFilterView
+                        android:id="@+id/classFilterView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F5F5F5"
+                        android:visibility="gone" />
+
+                    <com.huapu.huafen.views.FilterSortView
+                        android:id="@+id/filterSortView"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <com.huapu.huafen.views.FilterView
+                        android:id="@+id/filterView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/blankSpace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <com.huapu.huafen.views.HLoadingStateView
+        android:id="@+id/loadingStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>

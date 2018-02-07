@@ -1,0 +1,197 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/white_bg_gray_border_round_shape"
+    android:orientation="vertical"
+    android:padding="1px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivProPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/default_pic"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundBottomLeft="false"
+                    fresco:roundBottomRight="false"
+                    fresco:roundTopLeft="true"
+                    fresco:roundTopRight="true"
+                    fresco:roundedCornerRadius="3dp" />
+
+                <FrameLayout
+                    android:id="@+id/flAuctionIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layout_gravity="bottom"
+                    android:background="#80AEA9D7">
+
+                    <TextView
+                        android:id="@+id/tvAuction"
+                        style="@style/smallTextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/auction_icon_small"
+                        android:text="拍卖" />
+
+                </FrameLayout>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/article_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSelled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="27dp"
+                android:layout_marginTop="120dp"
+                android:src="@drawable/icon_selled"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!--</FrameLayout>-->
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/normalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text=" 111111111111111111111111" />
+
+        <TextView
+            android:id="@+id/tvBody"
+            style="@style/smallTextGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:visibility="gone" />
+
+        <com.huapu.huafen.views.CommonPriceTagView
+            android:id="@+id/cptv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSellPrice"
+            style="@style/normalTextPink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:text="1111" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/image_to_text">
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivHeader"
+                    style="@style/styleAvatarSmall"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/base_tab_bar_divider"
+                    fresco:roundingBorderWidth="0.5dp" />
+
+                <TextView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:ellipsize="end"
+                    android:maxEms="4"
+                    android:maxLines="1"
+                    android:textColor="@color/text_black"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ivInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/image_to_text"
+                android:paddingRight="5dp">
+
+                <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp" />
+
+                <TextView
+                    android:id="@+id/tvLike"
+                    style="@style/smallTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="5"
+                    android:maxLines="1" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

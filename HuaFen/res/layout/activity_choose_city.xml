@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layoutCity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title" >
+
+        <ListView
+            android:id="@+id/lvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fastScrollEnabled="false"
+            android:scrollbars="none" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tvToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/toast_bg"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textColor="@color/base_pink"
+            android:visibility="gone"
+            android:textSize="30sp" >
+        </TextView>
+
+        <com.huapu.huafen.views.RapidView
+            android:id="@+id/rapidview"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="80dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

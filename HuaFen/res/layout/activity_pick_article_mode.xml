@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/avatarBig"
+                    style="@style/styleAvatarBig"
+                    android:layout_gravity="center_horizontal"
+                    fresco:placeholderImage="@drawable/default_head"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/base_tab_bar_divider"
+                    fresco:roundingBorderWidth="0.5dp" />
+
+                <TextView
+                    style="@style/largeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_to_text"
+                    android:gravity="center_horizontal"
+                    android:text="发布花语，分享美好" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mode2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    fresco:placeholderImage="@drawable/pick_moment"
+                    fresco:viewAspectRatio="0.56" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mode1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    fresco:placeholderImage="@drawable/pick_article"
+                    fresco:viewAspectRatio="0.56" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

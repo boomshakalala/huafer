@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|bottom"
+    android:paddingBottom="84dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/ivCamera"
+        android:layout_width="55dp"
+        android:layout_height="55dp" 
+        android:background="@drawable/home_camera"/>
+    
+    <ImageView
+        android:id="@+id/ivAlbum"
+        android:layout_width="55dp"
+        android:layout_height="55dp" 
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/home_album"/>
+
+</LinearLayout>

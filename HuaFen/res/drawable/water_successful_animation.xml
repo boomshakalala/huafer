@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:oneshot="true"
+    >
+   <item android:drawable="@drawable/water_successful_1" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_2" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_3" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_4" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_5" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_6" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_7" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_8" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_9" android:duration="150"/>
+   <item android:drawable="@drawable/water_successful_10" android:duration="150"/>
+
+
+</animation-list>

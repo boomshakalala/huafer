@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutBase"
+        android:layout_width="fill_parent"
+        android:background="@color/black"
+        android:layout_height="@dimen/base_title_height">
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_title_back_select" />
+
+        <TextView
+            android:id="@+id/tvTitleGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_title_bar_34" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="编辑"
+            android:background="@null"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    <ru.truba.touchgallery.GalleryWidget.GalleryViewPager
+        android:id="@+id/viewer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_below="@id/layoutBase" />
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/ivBtnDel"
+            style="@style/normalTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="20dp"
+            android:src="@drawable/btn_pic_del"
+            />
+
+        <TextView
+            android:id="@+id/tvBtnFirst"
+            style="@style/normalTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="设置为主图" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

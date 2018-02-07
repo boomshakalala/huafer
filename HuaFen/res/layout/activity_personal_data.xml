@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical"
+    tools:context=".activity.PersonalDataActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layoutHead"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="头像" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivHeader"
+                        style="@style/styleAvatarNormal"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/image_to_image"
+                        android:layout_toLeftOf="@+id/ivRight1"
+                        android:contentDescription="@null"
+                        android:padding="3dp"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/default_head"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+
+                    <ImageView
+                        android:id="@+id/ivRight1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="昵称" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="@dimen/ts_des_28" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutGender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="性别" />
+
+                    <TextView
+                        android:id="@+id/tvSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/image_to_text"
+                        android:layout_toLeftOf="@+id/ivRight"
+                        android:textColor="@color/text_color_gray" />
+
+                    <ImageView
+                        android:id="@+id/ivRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutCity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="地区" />
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/image_to_text"
+                        android:layout_toLeftOf="@+id/ivRight2"
+                        android:textColor="@color/text_color_gray" />
+
+                    <ImageView
+                        android:id="@+id/ivRight2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="手机号" />
+
+                    <TextView
+                        android:id="@+id/tvPhoneNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:layout_toLeftOf="@+id/ivRight3"
+                        android:textColor="@color/text_color_gray" />
+
+                    <ImageView
+                        android:id="@+id/ivRight3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutEditChild"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvBabyInfo"
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="宝宝信息" />
+
+                    <ImageView
+                        android:id="@+id/babyArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />
+
+                    <com.huapu.huafen.views.BabyInfoLayout
+                        android:id="@+id/babyInfoLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/side"
+                        android:layout_toLeftOf="@id/babyArrow"
+                        android:layout_toRightOf="@id/tvBabyInfo"
+                        android:gravity="center_vertical|right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutAddressList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:text="我的收货地址" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bindAccount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_layout_states"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/side"
+                    android:text="账户绑定"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/ts_des_28" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:background="@drawable/right_enter" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_verified"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_verified"
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:drawableLeft="@drawable/icon_is_verified"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="实名认证" />
+
+                    <View
+                        android:id="@+id/view_verified"
+                        android:layout_width="0.5dp"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible" />
+
+                    <!--<ImageView
+                        android:id="@+id/ivAlipayArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/view_al"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />-->
+
+                    <TextView
+                        android:id="@+id/tv_verifiedStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:layout_toLeftOf="@id/view_verified" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/bindALipay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/aliBind"
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:drawableLeft="@drawable/icon_bind_list_ali"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="支付宝绑定" />
+
+                    <View
+                        android:id="@+id/view_al"
+                        android:layout_width="0.5dp"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible" />
+
+                    <!--<ImageView
+                        android:id="@+id/ivAlipayArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/view_al"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />-->
+
+                    <TextView
+                        android:id="@+id/aliStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:layout_toLeftOf="@id/view_al" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/bindWechat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/weiXinBind"
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:drawableLeft="@drawable/icon_bind_list_wechat"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="微信绑定" />
+
+                    <View
+                        android:id="@+id/view_wx"
+                        android:layout_width="0.5dp"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible" />
+
+                    <!--<ImageView
+                        android:id="@+id/ivWechatArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@drawable/right_enter" />-->
+
+                    <TextView
+                        android:id="@+id/weChatStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/side"
+                        android:layout_toLeftOf="@id/view_wx"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/base_divider_height"
+                    android:layout_marginLeft="@dimen/side"
+                    android:background="@color/divider_black" />
+
+                <RelativeLayout
+                    android:id="@+id/bindSinaLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_layout_states"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/weiBoBind"
+                        style="@style/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:drawableLeft="@drawable/wd_weibo_open"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="新浪微博绑定" />
+
+                    <View
+                        android:id="@+id/view_wb"
+                        android:layout_width="0.5dp"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/side"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ivSinaArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/image_to_text"
+                        android:layout_toLeftOf="@id/view_wb"
+                        android:background="@drawable/right_enter" />
+
+                    <TextView
+                        android:id="@+id/sinaWeiBoStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/ivSinaArrow"
+                        android:gravity="center_vertical" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

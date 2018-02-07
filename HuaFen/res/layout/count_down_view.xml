@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/llStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            style="@style/smallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="距离抢购开始还剩"
+            android:textSize="9sp" />
+
+        <com.huapu.huafen.views.CounterView
+            android:id="@+id/countViewStart"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side"
+        android:background="#FF5238"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/buying_icon"
+            />
+        <com.huapu.huafen.views.CounterViewNew
+            android:id="@+id/countViewEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="距结束"
+            android:layout_toLeftOf="@id/countViewEnd"
+            android:layout_marginRight="5dp"
+            style="@style/normalTextWhite"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+</FrameLayout>

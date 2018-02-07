@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/side"
+    android:paddingLeft="@dimen/side"
+    android:paddingRight="@dimen/side"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/addSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:viewAspectRatio="1.41"
+            fresco:placeholderImage="@drawable/article_camera"
+            fresco:placeholderImageScaleType="center"
+            android:background="#FFEBEF"
+            />
+        <com.huapu.huafen.views.TagsContainer
+            android:id="@+id/tagsContainer"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:id="@+id/flEditContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#30000000"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/tvEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="75dp"
+                android:drawableTop="@drawable/article_section_edit_icon"
+                android:drawablePadding="2dp"
+                style="@style/smallTextWhite"
+                android:text="编辑"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="75dp"
+                android:drawableTop="@drawable/article_section_delete_icon"
+                android:drawablePadding="2dp"
+                style="@style/smallTextWhite"
+                android:text="删除"
+                android:gravity="center_horizontal"
+                />
+
+
+        </FrameLayout>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tvInputContent"
+        style="@style/normalText"
+        android:layout_marginTop="@dimen/side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="77dp"
+        android:background="@drawable/shape_moment_content"
+        android:padding="10dp"
+        android:hint="输入这部花语背后的故事"
+        android:textColorHint="@color/text_black_enable"
+        />
+
+</LinearLayout>

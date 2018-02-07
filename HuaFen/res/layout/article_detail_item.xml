@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/side"
+    android:paddingRight="@dimen/side"
+    android:paddingBottom="@dimen/side">
+
+
+    <com.huapu.huafen.views.TagsContainer
+        android:id="@+id/tagsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_marginTop="@dimen/side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/normalText"
+        tools:text="我不容易晕车，所以没感觉，有会晕车的朋友可以准备点清凉油什么的，也可以让司机开慢一点。"
+        />
+
+</LinearLayout>

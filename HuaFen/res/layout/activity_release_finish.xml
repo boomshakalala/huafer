@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title_bar">
+
+        <LinearLayout
+            android:id="@+id/layoutReleaseFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/release_finish_pic_bg"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivHeader"
+                        style="@style/styleAvatarNormal"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@null"
+                        android:padding="3dp"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:placeholderImage="@drawable/default_head"
+                        fresco:roundAsCircle="true" />
+
+                    <com.huapu.huafen.views.CommonTitleView
+                        android:id="@+id/ctvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/layoutName"
+                    android:layout_marginTop="5dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivGoodsPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/default_pic"
+                        fresco:roundAsCircle="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/black_30"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="¥" />
+
+                        <TextView
+                            android:id="@+id/tvGoodsPrice"
+                            style="@style/bigTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            tools:text="100" />
+
+                        <TextView
+                            android:id="@+id/tvGoodsPastPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_to_text"
+                            android:gravity="center"
+                            android:textColor="#cccccc"
+                            android:textSize="12sp"
+                            tools:text="¥100" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvGoodsName"
+                    style="@style/normalTextGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutPic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/text_fccbcb_round_bg"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="3dp"
+                    android:singleLine="true"
+                    tools:text="全新商品哦" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="发布成功！"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <TextView
+                style="@style/normalTextWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="分享海报，商品更容易售出~" />
+
+            <LinearLayout
+                android:id="@+id/layoutShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+
+                <ImageView
+                    android:id="@+id/ivShareWX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/share_release_wx" />
+
+                <ImageView
+                    android:id="@+id/ivShareFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/share_release_friend" />
+
+                <ImageView
+                    android:id="@+id/ivShareSina"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/share_release_sina" />
+
+                <ImageView
+                    android:id="@+id/ivShareQQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/share_release_qq" />
+
+                <ImageView
+                    android:id="@+id/ivShareCopy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/share_release_copy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutExpressBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvBtnGoods"
+                    style="@style/normalTextWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_transparent_round_stroke_white_bg"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="查看商品" />
+
+                <TextView
+                    android:id="@+id/tvBtnRelease"
+                    style="@style/normalTextWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_transparent_round_stroke_white_bg"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="再发一个" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

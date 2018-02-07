@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "129655711204",
+    "firebase_url": "https://huafer-9d736.firebaseio.com",
+    "project_id": "huafer-9d736",
+    "storage_bucket": "huafer-9d736.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129655711204:android:df3720b79334e7ae",
+        "android_client_info": {
+          "package_name": "com.huapu.huafen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129655711204-fphng7canek3nk259elbgc60n99c4f46.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ0NFp2ew0G21z-ytI0fx6l7hDWY9kfBw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title_bar"
+        android:padding="10dp"
+        android:background="@color/white" />
+    <RelativeLayout
+        android:id="@+id/bottomView"
+        android:layout_below="@id/recyclerGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvCommit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/base_pink"
+            android:gravity="center"
+            android:text="确认提交"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

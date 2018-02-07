@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/personal_bg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/styleLayoutPadding"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivHeader"
+                style="@style/styleAvatarBig"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/default_head"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/image_to_text"
+                android:layout_toRightOf="@id/ivHeader">
+
+                <TextView
+                    android:id="@+id/tvAuth"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:visibility="visible"
+                    tools:text="1111111111" />
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tvAuth" />
+
+                <TextView
+                    android:id="@+id/tvPersonalData"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAuth"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/image_to_text"
+                    android:drawableRight="@drawable/home_right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="店主资料" />
+
+                <com.huapu.huafen.views.FollowImageView
+                    android:id="@+id/ivFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/tvPersonalData"
+                    tools:src="@drawable/btn_follow_gray_pressed" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_personal_home"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFollowCount"
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1222223" />
+
+                        <TextView
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/text_to_text"
+                            android:text="关注" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutFans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFansCount"
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="123" />
+
+                        <TextView
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/text_to_text"
+                            android:text="粉丝" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGoodsRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFavorableRate"
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="123" />
+
+                        <TextView
+                            style="@style/smallTextWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/text_to_text"
+                            android:text="好评率" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLastVisitText"
+                style="@style/smallTextWhiteEnable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="2"
+                android:gravity="right"
+                tools:text="2小时前来过" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/weiboBindingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#FEF5ED"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/weiBoBindText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginBottom="@dimen/text_to_text"
+                android:layout_marginTop="@dimen/text_to_text"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/side"
+                android:text="绑定微博账号，获得更多关注呦～去绑定"
+                android:textColor="#FD916B"
+                android:textSize="13.3sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/weiBoLayoutClose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/dianpu_weibo_binding" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCommentEnter"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/item_margin"
+                android:paddingTop="@dimen/item_margin">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivComment1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/personal_comment_1" />
+
+                    <TextView
+                        android:id="@+id/tvComment1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/image_to_text"
+                        android:maxLength="4"
+                        tools:text="1111" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivComment2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/personal_comment_2" />
+
+                    <TextView
+                        android:id="@+id/tvComment2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/image_to_text"
+                        android:ellipsize="end"
+                        android:maxLength="4"
+                        tools:text="1111111111111111" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivComment3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/image_to_text"
+                        android:src="@drawable/personal_comment_3" />
+
+                    <TextView
+                        android:id="@+id/tvComment3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:maxLength="4"
+                        tools:text="1211" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View style="@style/divider_line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/layoutNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rlNotice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp">
+                <!-- 显示文本 -->
+                <TextView
+                    android:id="@+id/tvNotice"
+                    style="@style/smallText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:ellipsize="end"
+                    android:fadeScrollbars="true"
+                    android:scrollbars="none"
+                    tools:text="11111122222222222222222222111111111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222221" />
+
+                <ImageView
+                    android:id="@+id/ivEditNotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvNotice"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/item_margin"
+                    android:src="@drawable/notice_edit" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- 更多的箭头 -->
+        <ImageView
+            android:id="@+id/ivNoticeMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlNotice"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/personal_notice_more_close" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/base_bg" />
+
+        <com.huapu.huafen.views.FlowerLayout
+            android:id="@+id/flowerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>

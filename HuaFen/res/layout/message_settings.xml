@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/base_bg"/>
+                <!--<TextView
+                    style="@style/normalTextGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    android:text="商品留言设置" />-->
+
+                <RadioGroup
+                    android:id="@+id/rgGoodsComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:checkedButton="@+id/rgGoodsCommentAll"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rgGoodsCommentAll"
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/leave_msg_rb_selector"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:paddingTop="@dimen/item_margin"
+                        android:paddingBottom="@dimen/item_margin"
+                        android:text="允许所有人留言" />
+
+                    <View
+                        style="@style/divider_line_horizontal"
+                        android:layout_marginLeft="@dimen/side" />
+
+                    <RadioButton
+                        android:id="@+id/rgGoodsCommentFriendOnly"
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/leave_msg_rb_selector"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:paddingTop="@dimen/item_margin"
+                        android:paddingBottom="@dimen/item_margin"
+                        android:text="仅允许互相关注的人留言" />
+
+                    <View
+                        style="@style/divider_line_horizontal"
+                        android:layout_marginLeft="@dimen/side" />
+
+                    <RadioButton
+                        android:id="@+id/rgGoodsCommentNone"
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/leave_msg_rb_selector"
+                        android:paddingLeft="@dimen/side"
+                        android:paddingRight="@dimen/side"
+                        android:paddingTop="@dimen/item_margin"
+                        android:paddingBottom="@dimen/item_margin"
+                        android:text="不允许留言" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutGoods"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:id="@+id/ivGoodPic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_pic"/>
+        <LinearLayout
+            android:layout_marginRight="@dimen/side"
+            android:layout_alignTop="@id/ivGoodPic"
+            android:layout_alignBottom="@id/ivGoodPic"
+            android:layout_toRightOf="@id/ivGoodPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/image_to_text"
+            android:gravity="center_vertical">
+            <com.huapu.huafen.views.DashLineView
+                android:id="@+id/dlvGoodsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dashLineStyle="bigBlack"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/base_bg"
+        />
+</LinearLayout>

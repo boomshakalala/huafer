@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    >
+    
+    <ImageView 
+        android:id="@+id/ivLost"
+        android:layout_width="148dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/thaw"
+        android:layout_below="@+id/layout_title_bar"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/textview" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLost"
+        android:text="您失去了信用金认证"
+        android:layout_marginTop="23dp"
+        android:layout_centerHorizontal="true"
+        style="@style/bigText"
+        />
+    <TextView 
+        android:id="@+id/textview2" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview"
+        android:layout_marginLeft="@dimen/side"
+        android:layout_marginRight="@dimen/side"
+        android:text="花粉儿已收到申请，会在3~5个工作日完成对账，并将信用金退到你的账户。"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        style="@style/normalTextGray"
+        />
+
+</RelativeLayout>

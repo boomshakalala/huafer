@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/base_bg" />
+
+    <TextView
+        android:id="@+id/auctionState"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_item_title"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        tools:text="hello" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/personLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/personPhoto"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/default_head"
+                fresco:roundAsCircle="true" />
+
+            <com.huapu.huafen.views.CommonTitleView
+                android:id="@+id/commonTitleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/dividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/personLayout"
+            android:background="@color/base_bg" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/goodsPhoto"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/dividerLine"
+            android:layout_margin="10dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/default_pic"
+            fresco:placeholderImageScaleType="centerCrop" />
+
+
+        <com.huapu.huafen.views.DashLineView
+            android:id="@+id/dlvGoodsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/goodsPhoto"
+            android:layout_marginLeft="-3dp"
+            android:layout_toRightOf="@id/goodsPhoto"
+            app:dashLineStyle="bigBlack" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/goodsPhoto"
+            android:layout_alignTop="@id/goodsPhoto"
+            android:layout_toRightOf="@id/goodsPhoto"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/beginPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:text="起拍价¥"
+                android:textColor="#ff6677"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/beginPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/beginPriceText"
+                android:textColor="#ff6677"
+                android:textSize="18sp"
+                tools:text="2222111" />
+
+            <TextView
+                android:id="@+id/tvFreeDelivery"
+                style="@style/smallTextWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/beginPrice"
+                android:background="@drawable/free_delivery_bg"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="包邮"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/depositMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/goodsPhoto"
+            android:layout_gravity="bottom"
+            android:layout_toRightOf="@id/goodsPhoto"
+            android:textColor="@color/text_color_gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/auctionStateImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/first_auction" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/base_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvContactTa"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_corner_auction"
+            android:gravity="center"
+            android:text="联系TA"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:id="@+id/offerPriceLayout"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_corner_auction_going"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/offerPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/list_auction"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="出价"
+                android:textColor="#cccccc" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/otherOperateLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/moreInfo"
+                android:layout_width="70dp"
+                android:layout_height="27dp"
+                android:background="@drawable/shape_corner_more"
+                android:gravity="center"
+                android:text="更多"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/orderDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_corner_order_detail"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="订单详情"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

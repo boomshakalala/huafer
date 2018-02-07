@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/content1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tx_4"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/content2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/content2_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/content2_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/content2_line"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tx_4" />
+
+        <ImageView
+            android:id="@+id/content2_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/content2_line"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tx_4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/content3_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/content3_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/content3_line"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tx_4" />
+
+        <ImageView
+            android:id="@+id/content3_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/content3_left"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tx_4" />
+
+        <ImageView
+            android:id="@+id/content3_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/content3_center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tx_4" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutItem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/expand_tab_item_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/expandtab_item_selector"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/ts_des_28" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/base_tab_bar_divider" />
+
+        <RelativeLayout
+            android:id="@+id/layoutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivHeader"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:placeholderImage="@drawable/default_head"
+                fresco:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toLeftOf="@+id/tvFollowState"
+                android:layout_toRightOf="@+id/ivHeader"
+                android:orientation="vertical">
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFirstBaby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_pink_light_round_bg"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ts_20" />
+
+                    <TextView
+                        android:id="@+id/tvSecondBaby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:background="@drawable/text_pink_light_round_bg"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ts_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/tvFollowState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="已关注"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/ts_small_24" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base_divider_height"
+        android:layout_marginLeft="60dp"
+        android:background="@color/base_tab_bar_divider"
+        android:visibility="gone" />
+
+</LinearLayout>

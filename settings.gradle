@@ -1,0 +1,8 @@
+include ':SpannableLib', ':Video'
+include ':NewPullToRefreshLib'
+include ':Cropper'
+include ':HuaFen'
+include ':pulltorefreshlibrary'
+include ':NumberPicker'
+include ':ShareSDK'
+include ':leancloudchatkit'

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlSellerComment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:visibility="visible">
+
+    <View
+        android:layout_marginLeft="@dimen/side"
+        style="@style/divider_line_horizontal"
+        android:id="@+id/viewTopCutLine"/>
+
+    <TextView
+        android:layout_below="@id/viewTopCutLine"
+        android:id="@+id/tvSellerComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/seller_comment_icon"
+        android:drawablePadding="@dimen/image_to_text"
+        android:paddingTop="@dimen/item_margin"
+        android:paddingBottom="@dimen/item_margin"
+        android:paddingRight="@dimen/side"
+        android:text="回复"
+        android:textColor="@color/text_color"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <LinearLayout
+        android:id="@+id/llSellerComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewTopCutLine"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        tools:visibility="visible" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/seller_comment_icon"
+            android:drawablePadding="@dimen/image_to_text"
+            android:textColor="@color/base_pink"
+            android:text="卖家回复" />
+
+        <TextView
+            android:layout_marginTop="@dimen/text_to_text"
+            android:id="@+id/tvSellerCommentContent"
+            style="@style/normalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

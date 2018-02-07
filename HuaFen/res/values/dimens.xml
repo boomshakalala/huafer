@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="button_text_size">14sp</dimen>
+    <dimen name="expand_tab_item_height">45dp</dimen>
+    <dimen name="expand_tab_eara_height">380dp</dimen>
+    <dimen name="head_bar_height">45dp</dimen>
+    <dimen name="base_title_height">45dp</dimen>
+    <dimen name="base_bottom_height">48dp</dimen>
+    <dimen name="ts_price_36">22sp</dimen>
+    <dimen name="ts_title_bar_34">16sp</dimen>
+    <dimen name="ts_title_32">16sp</dimen>
+    <dimen name="ts_des_28">14sp</dimen>
+    <dimen name="ts_small_24">14sp</dimen>
+    <dimen name="ts_small_26">13sp</dimen>
+    <dimen name="ts_20">12sp</dimen>
+    <dimen name="base_divider_height">1px</dimen>
+    <dimen name="margin_left">10dp</dimen>
+    <dimen name="pop_margin_left">20dp</dimen>
+    <dimen name="margin_right">10dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margin_bottom">10dp</dimen>
+    <dimen name="mine_padding_top">14dp</dimen>
+    <dimen name="head_height">250dp</dimen>
+    <dimen name="tab_height">50dp</dimen>
+    <dimen name="mine_tab_height">40dp</dimen>
+    <dimen name="credit_height">225dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="complaint_margin_top">15dp</dimen>
+    <dimen name="complaint_margin_bottom">10dp</dimen>
+    <dimen name="complaint_margin_left">12dp</dimen>
+    <dimen name="complaint_picture_margin_left">20dp</dimen>
+    <dimen name="divider_margin_left">12dp</dimen>
+    <dimen name="divider_margin_right">12dp</dimen>
+    <dimen name="complaint_checked">32dp</dimen>
+    <dimen name="complaint_checked_margin_right">22dp</dimen>
+    <dimen name="complaint_describe_height">100dp</dimen>
+    <dimen name="complaint_bottom_width">80dp</dimen>
+    <dimen name="complaint_bottom_height">80dp</dimen>
+    <dimen name="complaint_photo_width">36dp</dimen>
+    <dimen name="complaint_photo_height">36dp</dimen>
+
+    <dimen name="report_photo_width">65dp</dimen>
+    <dimen name="report_photo_height">65dp</dimen>
+    <dimen name="report_margin_bottom">15dp</dimen>
+    <dimen name="report_margin_left">9dp</dimen>
+    <dimen name="report_margin_top">20dp</dimen>
+
+    <dimen name="customer_goods_width">70dp</dimen>
+    <dimen name="customer_goods_height">70dp</dimen>
+    <dimen name="customer_margin_bottom">15dp</dimen>
+    <dimen name="customer_word_margin_top">3dp</dimen>
+    <dimen name="customer_postage_margin_top">2dp</dimen>
+    <dimen name="customer_goods_margin_bottom">10dp</dimen>
+    <dimen name="customer_goods_margin_right">12dp</dimen>
+    <dimen name="customer_margin_top">15dp</dimen>
+    <dimen name="customer_margin_left">9dp</dimen>
+    <dimen name="customer_feedback_margin_left">12dp</dimen>
+    <dimen name="customer_photo_margin_left">20dp</dimen>
+    <dimen name="customer_photo_margin_top">27dp</dimen>
+    <dimen name="customer_linerlayout_margin_top">20dp</dimen>
+    <dimen name="customer_padding">12dp</dimen>
+    <dimen name="customer_contact_way_height">45dp</dimen>
+
+
+    <dimen name="default_collapsed_padding">72dp</dimen>
+    <dimen name="default_expanded_padding">16dp</dimen>
+    <dimen name="default_collapsed_image_size">40dp</dimen>
+    <dimen name="default_expanded_image_size">60dp</dimen>
+    <dimen name="default_collapsed_text_size">18sp</dimen>
+    <dimen name="default_expanded_text_size">19sp</dimen>
+
+
+    <dimen name="my_fans_width">40dp</dimen>
+    <dimen name="my_fans_height">40dp</dimen>
+
+    <dimen name="pre_sell_corner">8dp</dimen>
+
+
+    <!--间距-->
+    <dimen name="image_to_image">10dp</dimen>
+    <dimen name="image_to_text">8dp</dimen>
+    <dimen name="text_to_text">5dp</dimen>
+    <dimen name="space_block">10dp</dimen>
+    <dimen name="side">16dp</dimen>
+    <dimen name="item_margin">10dp</dimen>
+
+    <dimen name="flower_space_ten">10dp</dimen>
+    <dimen name="flower_space_five">5dp</dimen>
+
+    <dimen name="flower_two_hundred">200dp</dimen>
+
+    <dimen name="box_size">50dp</dimen>
+
+    <dimen name="password_space">15dp</dimen>
+
+    <dimen name="two_point_five">2.5dp</dimen>
+
+    <dimen name="comment_drawable_padding">4dp</dimen>
+
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_larger">18sp</dimen>
+
+</resources>

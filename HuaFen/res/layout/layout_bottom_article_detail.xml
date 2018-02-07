@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#202020"
+    android:weightSum="3">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/zan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="点赞"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="11dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/leaveMessageBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/leave_message"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="留言"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="11dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/saveArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="收藏"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+</LinearLayout>

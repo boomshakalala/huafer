@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/normalTextGray"
+        android:text="可同时选择相邻的两个年龄段"
+        android:drawableLeft="@drawable/order_memo_seller_big"
+        android:drawablePadding="10dp"
+        />
+</LinearLayout>

@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/rotate_header_web_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        app:ptr_duration_to_close="200"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.huapu.huafen.scrollablelayoutlib.ScrollableLayout
+                android:id="@+id/scrollableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/banner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        app:canLoop="true" />
+
+                    <!--六大专区-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white" />
+
+
+                    <!--明星也在玩-->
+                    <com.huapu.huafen.views.IconRecycleView
+                        android:id="@+id/star"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:imageRatioOfWidth="0.24"
+                        app:imageRatioOfHeight="0.18"
+                        app:ratioOfHeight="0.22"/>
+
+                    <!--VIP精品-->
+
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/banner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:canLoop="true" />
+
+                    <com.huapu.huafen.views.IconRecycleView
+                        android:id="@+id/vip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:imageRatioOfWidth="0.24"
+                        app:imageRatioOfHeight="0.33"
+                        app:ratioOfHeight="0.37"
+                        android:visibility="gone" />
+
+                    <!--花语广场-->
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/banner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:canLoop="true" />
+
+                    <com.huapu.huafen.views.IconRecycleView
+                        android:id="@+id/poems"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:imageRatioOfWidth="0.24"
+                        app:imageRatioOfHeight="0.33"
+                        app:ratioOfHeight="0.37"
+                        android:visibility="gone" />
+
+
+                    <View
+                        android:id="@+id/space"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/base_bg"
+                        android:visibility="visible" />
+
+                    <!--  -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <com.huapu.huafen.scrollablelayoutlib.PagerSlidingTabStrip
+                            android:id="@+id/pagerStrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            app:pstsIndicatorColor="@color/base_pink"
+                            app:pstsIndicatorPadding="40dp"
+                            app:pstsShouldExpand="false"
+                            app:pstsTabPaddingLeftRight="50dp"
+                            app:pstsTabTextColor="@color/text_color_gray"
+                            app:pstsTabTextSize="14sp"
+                            app:pstsUnderlineHeight="0dp" />
+                    </LinearLayout>
+
+                    <View style="@style/divider_line_horizontal" />
+
+                </LinearLayout>
+
+                <!-- viewpager展示listview的 -->
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vpGoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.huapu.huafen.scrollablelayoutlib.ScrollableLayout>
+            <!---->
+
+        </LinearLayout>
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <com.huapu.huafen.animation.ViewUpSearch
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/ivBall"
+        android:layout_width="42dp"
+        android:layout_height="63.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/index_ball"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/devBall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/skate_girl_walking_1"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>

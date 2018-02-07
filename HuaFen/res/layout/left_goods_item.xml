@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <View
+        android:id="@+id/viewCheck"
+        android:layout_width="3dp"
+        android:layout_height="14dp"
+        android:background="@color/base_pink"
+        android:layout_centerVertical="true"
+        />
+
+
+    <TextView
+        android:id="@+id/tvClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/normalTextGray"
+        android:text="孕妈用品"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

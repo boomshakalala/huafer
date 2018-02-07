@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <!-- 线 -->
+    <color name="base_tab_bar_divider">#e2e2e2</color>
+    <color name="base_pop_divider">#5b5b5b</color>
+    <color name="base_title_bar_bg">#ffffffff</color>
+
+    <color name="pink_voice_bg">#FE6677</color>
+
+    <color name="base_pink_45">#73ff6677</color>
+    <color name="base_blue">#ff1dbce7</color>
+    <color name="link_blue">#53709c</color>
+    <color name="base_blue_light">#9fdeff</color>
+    <color name="base_pro_detail_time">#ff9bb0</color>
+    <color name="base_unread_dian">#ff0400</color>
+    <color name="base_circle_border">#ffff6677</color>
+    <color name="toast_bg">#f9f9f9</color>
+    <color name="order_detail">#FAFAFA</color>
+    <color name="order_detail_title">#fef6ee</color>
+    <color name="base_btn_normal">#cccccc</color>
+    <!-- 半透明 -->
+    <color name="color_transparents2">#00ffffff</color>
+    <color name="color_transparents3">#99000000</color>
+    <!-- 半透明 -->
+    <color name="color_transparents30">#0c030600</color>
+    <color name="text_round_green_light">#8ed5be</color>
+    <color name="text_round_green">#9de0cc</color>
+    <color name="color_green">#3db034</color>
+
+    <!-- 默认字体颜色 -->
+    <color name="text_color">#333333</color>
+    <color name="text_color_gray">#888888</color>
+    <color name="text_color_sys_blue">#219ffe</color>
+
+    <color name="index_title_bg">#fac8d2</color>
+    <color name="order_refund_head_bg">#ffc850</color>
+    <color name="black_10">#1A000000</color>
+    <color name="black_18">#2E000000</color>
+    <color name="black_72">#B8000000</color>
+    <color name="black_85">#D9000000</color>
+
+    <color name="black_30">#4D000000</color>
+    <color name="class_layout_item_bg">#F7F9FB</color>
+    <color name="expandtab_item_press_color">#f4f4f4</color>
+    <color name="black">#000000</color>
+
+    <color name="white_50">#80ffffff</color>
+    <color name="popup_main_background">#b0000000</color>
+    <color name="pay_result_getting">#cccccc</color>
+    <!-- 马赛克控件 -->
+    <color name="mosaicblue">#20bcff</color>
+    <color name="mosaicdark">#77f0f0f0</color>
+
+
+    <color name="common_list_selector_grey">#F5F5F5</color>
+    <color name="share_dialog_bg">#f0f0f0</color>
+    <!-- 蓝色假日类型 -->
+    <color name="color_blue_free">#2d8bff</color>
+    <!-- 蓝色 -->
+    <color name="color_blue">#00B8F5</color>
+    <color name="color_bg_blue">#86aeee</color>
+
+
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <!-- 水平滚动的viewpager -->
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <!--芝麻信用表盘颜色-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_montage_bg">#BF000000</color>
+    <color name="color_70">#B3000000</color>
+    <color name="color_tip_bg">#96000000</color>
+    <color name="e6e6e6">#e6e6e6</color>
+    <color name="black_25">#80000000</color>
+
+
+    <color name="cardBodyColor">#FFFFFF</color>
+    <color name="cardShadowColor_1">#0a000000</color>
+    <color name="cardShadowColor_2">#0f000000</color>
+    <color name="cardShadowColor_3">#14000000</color>
+    <color name="cardShadowColor_4">#19000000</color>
+    <color name="cardShadowColor_5">#1e000000</color>
+    <color name="cardShadowColor_6">#23000000</color>
+    <color name="cardShadowColor_7">#28000000</color>
+    <color name="cardShadowColor_8">#2d000000</color>
+    <dimen name="cardPadding">1dp</dimen>
+    <dimen name="cardRadius">10dp</dimen>
+
+
+    <!-- 分割线————————————————————————————————————————————分割线-->
+
+    <!--字色-->
+    <color name="text_black">#DE000000</color>
+    <color name="text_black_light">#8A000000</color>
+    <color name="text_black_enable">#42000000</color>
+
+    <color name="text_white_light">#83FFFFFF</color>
+    <color name="text_white_enable">#4DFFFFFF</color>
+
+    <!--分割线-->
+    <color name="divider_black">#1F000000</color>
+    <color name="divider_white">#1FFFFFFF</color>
+
+    <!-- 默认背景颜色 -->
+    <color name="base_bg">#F7F9FB</color>
+
+    <color name="tag_bg">#F4F4F4</color>
+    <color name="rc_normal_bg">#EBEBEB</color>
+    <color name="base_pink">#FF6677</color>
+    <color name="base_pink_light">#FF9BB0</color>
+
+    <color name="base_pink_light_70">#B3FF9BB0</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="clock_article">#66000000</color>
+
+    <color name="mine_bg">#4D000000</color>
+    <color name="tv_bg">#d8d8d8</color>
+
+    <color name="chuanda">#F3C75B</color>
+    <color name="pengren">#FD916B</color>
+    <color name="lvxing">#A1DEFD</color>
+    <color name="tv_gray">#888888</color>
+    <color name="huli">#FD9CB1</color>
+    <color name="shenghuo">#90DAC1</color>
+
+    <color name="huayumengcheng">#64000000</color>
+
+    <color name="im_send_bg">#0076ff</color>
+
+    <color name="rc_plugins_bg">#F8F8F8</color>
+
+    <color name="translucent">#00000000</color>
+
+</resources>

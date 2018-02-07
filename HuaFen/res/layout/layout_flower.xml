@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/side"
+        android:paddingRight="@dimen/side"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/normalText"
+            android:text="花语"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/smallText"
+            android:text="                "
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/fill_black"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/emptyPlaceHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:placeholderImageScaleType="centerCrop"
+            android:layout_marginLeft="@dimen/side"
+            android:layout_marginRight="@dimen/side"
+            fresco:viewAspectRatio="2.7"
+            fresco:placeholderImage="@drawable/shop_flower_bg"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+    </FrameLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/base_bg" />
+
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/changerIma"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#44000000"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivHeader"
+                style="@style/styleAvatarBig"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="1dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                tools:background="@drawable/default_head"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/image_to_text"
+                android:layout_toRightOf="@id/ivHeader">
+
+                <TextView
+                    android:id="@+id/tvAuth"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:visibility="visible"
+                    tools:text="1111111111"/>
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tvAuth"/>
+
+                <TextView
+                    android:id="@+id/tvPersonalData"
+                    style="@style/smallTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAuth"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/image_to_text"
+                    android:drawableRight="@drawable/home_right_arrow"
+                    android:gravity="center_vertical"
+                    android:text="TA的店铺"/>
+
+                <com.huapu.huafen.views.FollowImageView
+                    android:id="@+id/ivFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginRight="@dimen/side"
+                    tools:src="@drawable/btn_follow_gray_pressed"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivHeader"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="@dimen/side">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layoutFollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvFollowCount"
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                />
+
+                            <TextView
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/text_to_text"
+                                android:text="关注"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/side"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/layoutFans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvFansCount"
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                />
+
+                            <TextView
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/text_to_text"
+                                android:text="粉丝"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/side"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/layoutSc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvScCount"
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""/>
+
+                            <TextView
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/text_to_text"
+                                android:text="被收藏"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/side"
+                        android:layout_marginRight="@dimen/side"
+                        android:background="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/layoutPraise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPraise"
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""/>
+
+                            <TextView
+                                style="@style/smallTextWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/text_to_text"
+                                android:text="被赞"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layoutReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_title_bar"
+            android:background="@color/base_bg"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvReport"
+                style="@style/normalTextGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/report_layout" />
+
+            <View
+                android:id="@+id/divider"
+                style="@style/divider_line_horizontal"
+                android:layout_below="@id/tvLayout" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutReportComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlLayout"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/item_margin"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            android:paddingTop="@dimen/item_margin"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivHeader"
+                style="@style/styleAvatarNormal"
+                android:contentDescription="@null"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:placeholderImage="@drawable/default_head"
+                fresco:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    style="@style/smallTextBlackEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_to_text"
+                    android:maxLines="1"
+                    tools:text="01-09 19:00" />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    style="@style/normalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_to_text"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放按时发放" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutReportGoods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlLayout"
+            android:paddingBottom="@dimen/item_margin"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            android:paddingTop="@dimen/item_margin"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivReportGoods"
+                style="@style/styleAvatarBig"
+                fresco:actualImageScaleType="centerCrop" />
+
+            <com.huapu.huafen.views.DashLineView
+                android:id="@+id/dlvGoodsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/side"
+                android:layout_toRightOf="@id/ivReportGoods"
+                app:dashLineStyle="bigBlack" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutReport"
+        android:background="@color/base_bg">
+
+        <TextView
+            android:id="@+id/tvReportReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/report_cause"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/ts_des_28" />
+
+        <View
+            android:id="@+id/causeDivider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/base_divider_height"
+            android:layout_below="@id/tvReportReason"
+            android:background="@color/base_tab_bar_divider" />
+    </RelativeLayout>
+
+</RelativeLayout>

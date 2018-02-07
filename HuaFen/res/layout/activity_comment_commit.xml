@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <EditText
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:id="@+id/etComment"
+        android:maxLength="100"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@null"
+        android:gravity="left"
+        style="@style/normalText"
+        tools:hint="回复xxxx"
+        android:textColorHint="@color/base_tab_bar_divider"
+        />
+    <TextView
+        android:id="@+id/tvLength"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/normalTextGray"
+        android:text="0/100"
+        android:layout_below="@id/etComment"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        />
+    <View
+        android:layout_below="@id/tvLength"
+        style="@style/divider_line_horizontal"
+        />
+</RelativeLayout>

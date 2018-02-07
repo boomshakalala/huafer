@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+    <!--图片轮播区域-->
+    <LinearLayout
+        android:id="@+id/llPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlLooperPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:visibility="visible">
+
+            <com.huapu.huafen.looper.LooperPager
+                android:id="@+id/looperPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layoutPlay"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/text_pink_rect_bg"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivPlayState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/play_state3" />
+
+                    <TextView
+                        android:id="@+id/tvSoundTime"
+                        style="@style/smallTextWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        tools:text="7“" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPreSellTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/base_pink_light_70"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvPreSellTime"
+                        style="@style/smallTextWhite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        tools:text="预售时间：2017年3月17日 21:00" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/home_right_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAuctionTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/base_pink_light_70"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvAuctionTime"
+                        style="@style/smallTextWhite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="13dp"
+                        tools:text="预售时间：2017年3月17日 21:00" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvGoodsNameAndBrand"
+                    style="@style/bigText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="Ja11111" />
+
+                <TextView
+                    android:id="@+id/tvViews"
+                    style="@style/smallTextBlackEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="right"
+                    tools:text="1162次浏览" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGoodsPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/item_margin"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/bigTextPink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                tools:text="¥11" />
+
+            <TextView
+                android:id="@+id/tvPastPrice"
+                style="@style/smallTextGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                tools:text="¥11" />
+
+            <TextView
+                android:id="@+id/tvFreeDelivery"
+                style="@style/smallTextWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/free_delivery_bg"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="包邮"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAuctionPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/item_margin"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side">
+
+            <TextView
+                android:id="@+id/tvAuctionDes"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                tools:text="当前价格" />
+
+            <TextView
+                android:id="@+id/tvAuctionPrice"
+                style="@style/largeTextPink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                tools:text="¥11" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvContent"
+            style="@style/normalTextGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/item_margin"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            tools:text="适合两岁以内的宝宝，新旧如图！不议价，全新如图，有吊牌，适合一岁到两岁多的宝宝，正好春天穿，喜欢的拍下吧，牛仔比较耐磨" />
+
+        <View style="@style/divider_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side">
+
+            <TextView
+                android:id="@id/tvLocation"
+                style="@style/smallTextBlackEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/location_icon"
+                android:drawablePadding="@dimen/image_to_text"
+                android:gravity="center_vertical"
+                android:text="北京 | 朝阳区" />
+
+            <TextView
+                android:id="@+id/tvLastVisitText"
+                style="@style/smallTextBlackEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                tools:text="店主20分钟前来过" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--商品情报-->
+    <LinearLayout
+        android:id="@+id/tvCommodityInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/base_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tvGoodsInformation"
+                style="@style/bigText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/pink_vertical_line"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="商品情报"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFavorableCount"
+                style="@style/smallTextBlackEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tvGoodsInformation"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                tools:text="625人收藏" />
+        </RelativeLayout>
+
+        <View style="@style/divider_line_horizontal" />
+
+        <com.huapu.huafen.views.HGoodsLayout
+            android:id="@+id/goodsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <com.huapu.huafen.views.ClassBannerView
+            android:id="@+id/bannerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llGuarantee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            android:paddingTop="5dp"
+
+            >
+
+            <TextView
+                android:id="@+id/tvGuarantee"
+                style="@style/smallTextPink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/goods_detail_lock"
+                android:drawablePadding="10dp"
+                tools:text="使用花粉儿担保交易，保障钱款安全" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/right_enter"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFromTo"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tvFromTo"
+                style="@style/smallTextGray2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/blue_hammer"
+                android:drawablePadding="10dp"
+                android:text="本次拍卖所得将全部捐赠a四川甘孜炉霍县上罗科马学校" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/right_enter" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--店主信息-->
+    <LinearLayout
+        android:id="@+id/llOwnerInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvOwnerInformation"
+            style="@style/bigText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pink_vertical_line"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/side"
+            android:paddingRight="@dimen/side"
+            android:paddingTop="5dp"
+            android:text="店主信息"
+            android:textStyle="bold" />
+
+        <View style="@style/divider_line_horizontal" />
+
+        <LinearLayout
+            style="@style/styleLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                fresco:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/side"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.huapu.huafen.views.CommonTitleView
+                    android:id="@+id/ctvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvAuth"
+                    style="@style/smallText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    tools:text="花粉儿认证：时尚达人" />
+
+                <TextView
+                    android:id="@+id/tvFavorableRateAndOnSell"
+                    style="@style/smallText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    tools:text="好评率：73%    在售商品：32"
+
+                    />
+            </LinearLayout>
+
+            <com.huapu.huafen.views.FollowImageView
+                android:id="@+id/ivFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/image_to_text"
+                tools:src="@drawable/btn_follow_gray_pressed" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.huapu.huafen.views.BidListLayout
+        android:id="@+id/bidListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_margin"
+        android:background="@color/white" />
+
+    <com.huapu.huafen.views.CommentContainer
+        android:id="@+id/commentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_margin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_bg"
+        android:paddingBottom="15dp"
+        android:paddingTop="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            fresco:placeholderImage="@drawable/product_like"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:viewAspectRatio="18.20" />
+
+    </RelativeLayout>
+
+</LinearLayout>

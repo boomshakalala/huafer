@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/avatar_iv"
+            style="@style/styleAvatarBig"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:roundAsCircle="true" />
+
+        <com.huapu.huafen.views.CommonTitleView
+            android:id="@+id/ctvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blocked_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="48dp"
+        android:paddingTop="48dp"
+        android:textColor="@color/base_pink"
+        android:textSize="@dimen/text_normal" />
+
+    <ImageView
+        android:id="@+id/empty_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@mipmap/img_blocked" />
+
+    <Button
+        android:id="@+id/contact_customer_service"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="40dp"
+        android:background="@drawable/selector_corner_circle_pink"
+        android:gravity="center"
+        android:text="联系小花儿客服"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large" />
+
+</LinearLayout>
